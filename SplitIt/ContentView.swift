@@ -45,6 +45,15 @@ struct ContentView: View {
                                 .fill(Color.gray)
                                 .frame(width: 40, height: 40))
                     }
+//                    .onChange(of: capturedImage){
+//                        _ in uploadImage()
+//                    }
+                    .onChange(of: capturedImage) { oldValue, newValue in
+                        if newValue != nil {
+                            uploadImage()
+                        }
+                    }
+
                 }
                 
                 Spacer()
@@ -55,43 +64,38 @@ struct ContentView: View {
             CameraView(image: $capturedImage)
         }
     }
+    func uploadImage() {
+        guard let image = capturedImage, let imageData = image.jpegData(compressionQuality: 0.8) else {
+            print("No image to upload")
+            return
+        }
+
+        let url = URL(string: "https://your-api-endpoint.com/upload")! // Replace with your API URL
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+        let base64String = imageData.base64EncodedString()
+        let json: [String: Any] = ["image": base64String]
+        
+        do {
+            request.httpBody = try JSONSerialization.data(withJSONObject: json)
+        } catch {
+            print("Error encoding JSON:", error)
+            return
+        }
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Upload failed:", error)
+                return
+            }
+            print("Upload successful:", response ?? "No response")
+        }.resume()
+    }
+
 }
 
 #Preview {
     ContentView()
 }
-
-//
-//                if let image = capturedImage {
-//                    Image(uiImage: image)
-//                        .resizable()
-//                        .scaledToFit()
-//                        .frame(height: 300)
-//                        .cornerRadius(10)
-//                        .padding()
-//                } else {
-//                    Button(action: {
-//                        showCamera = true
-//                    }) {
-//                        Text("Take a Photo of Your Receipt")
-//                            .font(.headline)
-//                            .foregroundColor(.white)
-//                            .padding()
-//                            .background(Color.blue)
-//                            .cornerRadius(10)
-//                    }
-//                    .padding(.top, 20)
-//                }
-//
-//                Spacer()
-//            }
-//        }
-//        .sheet(isPresented: $showCamera) {
-//            CameraView(image: $capturedImage)
-//        }
-//    }
-//}
-//
-//#Preview {
-//    ContentView()
-//}
