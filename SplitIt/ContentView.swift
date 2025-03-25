@@ -64,13 +64,13 @@ struct ContentView: View {
             CameraView(image: $capturedImage)
         }
     }
-    func uploadImage() {
+   /*func uploadImage() {
         guard let image = capturedImage, let imageData = image.jpegData(compressionQuality: 0.8) else {
             print("No image to upload")
             return
         }
 
-        let url = URL(string: "https://your-api-endpoint.com/upload")! // Replace with your API URL
+        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")! // Replace with your API URL
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -92,7 +92,81 @@ struct ContentView: View {
             }
             print("Upload successful:", response ?? "No response")
         }.resume()
+    }*/
+
+    /*func uploadImage() {
+        guard let image = capturedImage, let imageData = image.jpegData(compressionQuality: 0.8) else {
+            print("No image to upload")
+            return
+        }
+
+        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")! // API URL
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.setValue("application/octet-stream", forHTTPHeaderField: "Content-Type") // Correct content type
+
+        request.httpBody = imageData // Directly send the image data
+
+        URLSession.shared.dataTask(with: request) { data, response, error in
+            if let error = error {
+                print("Upload failed:", error)
+                return
+            }
+            print("Upload successful:", response ?? "No response")
+        }.resume()
+    }*/
+
+    func uploadImage() {
+    guard let image = capturedImage, let imageData = image.jpegData(compressionQuality: 0.8) else {
+        print("No image to upload")
+        return
     }
+
+    let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")! // replace 127.0.0.1 with your local IP address
+    var request = URLRequest(url: url)
+    request.httpMethod = "POST"
+
+    // Create boundary
+    let boundary = "Boundary-\(UUID().uuidString)"
+    request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
+
+    // Create body data
+    var body = Data()
+
+    // Add the image to the body
+    let filename = "receipt.jpg"  // You can change the file name
+    body.append("--\(boundary)\r\n".data(using: .utf8)!)
+    body.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n".data(using: .utf8)!)
+    body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
+    body.append(imageData)
+    body.append("\r\n".data(using: .utf8)!)
+
+    // Close the body with boundary
+    body.append("--\(boundary)--\r\n".data(using: .utf8)!)
+
+    // Set the body for the request
+    request.httpBody = body
+
+    // Perform the upload request
+    URLSession.shared.dataTask(with: request) { data, response, error in
+        if let error = error {
+            print("Upload failed:", error)
+            return
+        }
+        
+        // Check the response and print the result
+        if let response = response as? HTTPURLResponse, response.statusCode == 200 {
+            print("Upload successful!")
+            // Optionally handle the response data if needed
+            if let data = data {
+                let responseString = String(data: data, encoding: .utf8) ?? "No response data"
+                print("Response: \(responseString)")
+            }
+        } else {
+            print("Upload failed. Response: \(String(describing: response))")
+        }
+    }.resume()
+}
 
 }
 
