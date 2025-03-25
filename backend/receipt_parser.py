@@ -4,8 +4,18 @@ import time
 from PIL import Image
 from decouple import config
 from fastapi import FastAPI, File, UploadFile
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# Allow all origins to make requests (for testing)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 
 # Set up API endpoint and key
 endpoint = "https://tvu.cognitiveservices.azure.com/"
@@ -50,6 +60,11 @@ async def upload_receipt(file: UploadFile):
 
     else:
         print(f"Error {response.status_code}: {response.text}")
+
+@app.get("/")
+async def read_root():
+    return {"message": "Hello, world!"}
+
 
 if __name__ == "__main__":
     import uvicorn
