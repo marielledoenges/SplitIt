@@ -68,19 +68,4 @@ async def read_root():
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)  
-
-
-# # Resize image to max allowed dimensions
-# with Image.open(image_path) as img:
-#     img.thumbnail((4200, 4200))  # Resize while keeping aspect ratio
-#     img.save("resized_receipt.jpg", quality=85)  # Compress slightly
-
-# print("Image resized and saved as resized_receipt.jpg")
-
-# with open("resized_receipt.jpg", "rb") as file:
-#     headers = {
-#         "Ocp-Apim-Subscription-Key": key,
-#         "Content-Type": "application/octet-stream",
-#     }
-#     response = requests.post(url, headers=headers, data=file)
+    uvicorn.run(app, host="0.0.0.0", port=8000)
