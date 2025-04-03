@@ -18,7 +18,7 @@ app.add_middleware(
 )
 
 # Set up API endpoint and key
-endpoint = "https://tvu.cognitiveservices.azure.com/"
+endpoint = "https://michelle.cognitiveservices.azure.com/"
 key = config('API_KEY')
 url = f"{endpoint}formrecognizer/documentModels/prebuilt-receipt:analyze?api-version=2023-07-31"
 
