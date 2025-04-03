@@ -5,6 +5,7 @@ from PIL import Image
 from decouple import config
 from fastapi import FastAPI, File, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel, Field
 
 app = FastAPI()
 
@@ -22,8 +23,22 @@ endpoint = "https://michelle.cognitiveservices.azure.com/"
 key = config('API_KEY')
 url = f"{endpoint}formrecognizer/documentModels/prebuilt-receipt:analyze?api-version=2023-07-31"
 
+class Item(BaseModel):
+    description: str
+    price: float
 
-image_path = "../images/enson.jpg"
+class TaxDetail(BaseModel):
+    description: str
+    amount: float
+
+class Receipt(BaseModel):
+    items: list[Item] = []
+    merchant_name: str 
+    subtotal: float
+    tax_details: list[TaxDetail] = []
+    total: float
+    total_tax: float
+    tip: float
 
 @app.post("/upload-receipt/")
 async def upload_receipt(file: UploadFile):
@@ -56,10 +71,27 @@ async def upload_receipt(file: UploadFile):
             time.sleep(3)  # Wait before polling again
 
         # Print final result
-        print(json.dumps(result_json, indent=2))
+        #print(json.dumps(result_json, indent=2))
+        
+        return receipt
 
     else:
         print(f"Error {response.status_code}: {response.text}")
+
+def extract_json(result_json):
+    items = []
+    fields = result_json['analyzeResult']['documents'][0]['fields']
+    for item in fields['Items']:
+        try:
+            quantity = item['Quantity']
+            price = item['Price']
+        except KeyError:
+            quantity = 1
+            price = item['TotalPrice']
+        
+        for i in range(quantity):
+            items.append(Item(description=items['Description']['content'], price=price))
+
 
 @app.get("/")
 async def read_root():

@@ -9,6 +9,7 @@ We want to extract the following fields:
 |:------|:-----|:------------|:--------|
 |`Items`|`array`|||
 |`Items.*`|`object`|Extracted line item|1<br>Surface Pro 6<br>$999.00<br>$999.00|
+|`Items.*.TotalPrice`|`currency`|Total price of line item|$999.00|
 |`Items.*.Description.content`|`string`|Item description|Surface Pro 6|
 |`Items.*.Quantity`|`number`|Quantity of each item|1|
 |`Items.*.Price`|`currency`|Individual price of each item unit|$999.00|
