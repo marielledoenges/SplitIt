@@ -9,8 +9,7 @@ We want to extract the following fields:
 |:------|:-----|:------------|:--------|
 |`Items`|`array`|||
 |`Items.*`|`object`|Extracted line item|1<br>Surface Pro 6<br>$999.00<br>$999.00|
-|`Items.*.TotalPrice`|`currency`|Total price of line item|$999.00|
-|`Items.*.Description`|`string`|Item description|Surface Pro 6|
+|`Items.*.Description.content`|`string`|Item description|Surface Pro 6|
 |`Items.*.Quantity`|`number`|Quantity of each item|1|
 |`Items.*.Price`|`currency`|Individual price of each item unit|$999.00|
 |`MerchantName.content`|`string`|Name of the merchant issuing the receipt|Contoso|
@@ -18,11 +17,10 @@ We want to extract the following fields:
 |`TaxDetails`|`array`|List of tax details||
 |`TaxDetails.*`|`object`|A single tax detail|Sales Tax(10%) $10.00 $1.00 $11.00|
 |`TaxDetails.*.Amount.valueCurrency`|`currency`|The amount of the tax detail|$1.00|
-|`TaxDetails.*.Rate.content`|`number`|The rate of the tax detail|10%|
-|`TaxDetails.*.NetAmount.content`|`currency`|The net amount before tax.|$10.00|
 |`TaxDetails.*.Description.content`|`string`|The description of the tax detail|Sales Tax|
 |`Total.valueNumber`|`number`|Full transaction total of receipt|$14.34|
 |`TotalTax.valueNumber`|`number`|Tax on receipt, often sales tax or equivalent|$2.00|
 |`Tip.valueNumber`|`number`|Tip included by buyer|$1.00|
 
 
+If a Quantity exists for an Item, extract the Quantity n and create n Item elements with individual Price of each item unit.
