@@ -88,19 +88,35 @@ def extract_json(result_json):
     items = []
     tax_details = []
     fields = result_json['analyzeResult']['documents'][0]['fields']
-    for item in fields['Items']:
-        try:
-            quantity = item['Quantity']
-            price = item['Price']
-        except KeyError:
-            quantity = 1
-            price = item['TotalPrice']
+    # for item in fields['Items']:
+    #     try:
+    #         quantity = item['Quantity']
+    #         price = item['Price']
+    #     except KeyError:
+    #         quantity = 1
+    #         price = item['TotalPrice']
         
-        for i in range(quantity):
-            items.append(Item(description=items['Description']['content'], price=price))
+    #     for i in range(quantity):
+    #         items.append(Item(description=items['Description']['content'], price=price))
+    for item in fields.get('Items', {}).get('valueArray', []):
+        obj = item.get('valueObject', {})
+        description = obj.get('Description', {}).get('content', 'Unknown Item')
+        price_str = obj.get('TotalPrice', {}).get('content', '0')
+        try:
+            price = float(price_str)
+        except ValueError:
+            price = 0.0
+        items.append(Item(description=description, price=price))
 
-    for tax in fields['TaxDetails']:
-        tax_details.append(TaxDetail(description=tax['content'], amount=tax['valueObject']['Amount']['content']))
+    for tax in fields.get('TaxDetails', {}).get('valueArray', []):
+        obj = tax.get('valueObject', {})
+        tax_desc = obj.get('TaxType', {}).get('content', 'Tax')
+        amount_str = obj.get('Amount', {}).get('content', '0')
+        try:
+            amount = float(amount_str)
+        except ValueError:
+            amount = 0.0
+        tax_details.append(TaxDetail(description=tax_desc, amount=amount))
 
     return Receipt(
         items=items, 
