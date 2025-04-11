@@ -72,6 +72,12 @@ async def upload_receipt(file: UploadFile):
 
         # Print final result
         #print(json.dumps(result_json, indent=2))
+
+        # write returned json to a file
+        with open("receipt_result.json", "w") as result_file:
+            json.dump(result_json, result_file, indent=2)
+
+        receipt = extract_json(result_json=result_json)
         
         return receipt
 
@@ -80,6 +86,7 @@ async def upload_receipt(file: UploadFile):
 
 def extract_json(result_json):
     items = []
+    tax_details = []
     fields = result_json['analyzeResult']['documents'][0]['fields']
     for item in fields['Items']:
         try:
@@ -91,6 +98,15 @@ def extract_json(result_json):
         
         for i in range(quantity):
             items.append(Item(description=items['Description']['content'], price=price))
+
+    for tax in fields['TaxDetails']:
+        tax_details.append(TaxDetail(description=tax['content'], amount=tax['valueObject']['Amount']['content']))
+
+    return Receipt(
+        items=items, 
+        merchant_name='',
+        tax_details=tax_details,
+        )
 
 
 @app.get("/")
