@@ -100,7 +100,7 @@ def extract_json(result_json):
         # TODO: Handle quantity if an item has quantity > 1
         obj = item.get('valueObject', {})
         description = obj.get('Description', {}).get('content', 'Unknown Item')
-        price_str = obj.get('TotalPrice', {}).get('valueNumber', '0')
+        price_str = obj.get('TotalPrice', {}).get('valueNumber', 0)
         try:
             price = float(price_str)
         except ValueError:
@@ -110,7 +110,7 @@ def extract_json(result_json):
     for tax in fields.get('TaxDetails', {}).get('valueArray', []):
         obj = tax.get('valueObject', {})
         tax_desc = obj.get('TaxType', {}).get('content', 'Tax')
-        amount_str = obj.get('Amount', {}).get('content', '0')
+        amount_str = obj.get('Amount', {}).get('valueNumber', 0)
         try:
             amount = float(amount_str)
         except ValueError:
