@@ -74,15 +74,19 @@ async def upload_receipt(file: UploadFile):
         #print(json.dumps(result_json, indent=2))
 
         # write returned json to a file
-        with open("receipt_result.json", "w") as result_file:
+        with open("raw_result.json", "w") as result_file:
             json.dump(result_json, result_file, indent=2)
 
         receipt = extract_json(result_json=result_json)
+
+        # with open("extracted_result.json", "w") as result_file:
+        #     json.dump(receipt, result_file, indent=2)
         
         return receipt
 
     else:
         print(f"Error {response.status_code}: {response.text}")
+        return {"error": response.text}
 
 def extract_json(result_json):
     items = []
@@ -99,9 +103,10 @@ def extract_json(result_json):
     #     for i in range(quantity):
     #         items.append(Item(description=items['Description']['content'], price=price))
     for item in fields.get('Items', {}).get('valueArray', []):
+        # TODO: Handle quantity if an item has quantity > 1
         obj = item.get('valueObject', {})
         description = obj.get('Description', {}).get('content', 'Unknown Item')
-        price_str = obj.get('TotalPrice', {}).get('content', '0')
+        price_str = obj.get('TotalPrice', {}).get('valueNumber', '0')
         try:
             price = float(price_str)
         except ValueError:
@@ -119,9 +124,13 @@ def extract_json(result_json):
         tax_details.append(TaxDetail(description=tax_desc, amount=amount))
 
     return Receipt(
-        items=items, 
-        merchant_name='',
-        tax_details=tax_details,
+        items=items,
+        merchant_name=fields.get('MerchantName', {}).get('content', ''),
+        subtotal=float(fields.get('Subtotal', {}).get('valueNumber', 0)),
+        total=float(fields.get('Total', {}).get('valueNumber', 0)),
+        total_tax=float(fields.get('TotalTax', {}).get('valueNumber', 0)),
+        tip=float(fields.get('Tip', {}).get('valueNumber', 0)),
+        tax_details=tax_details
         )
 
 
