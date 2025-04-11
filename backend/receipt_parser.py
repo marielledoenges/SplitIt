@@ -70,17 +70,11 @@ async def upload_receipt(file: UploadFile):
             print("Processing... Waiting 3 seconds before retrying.")
             time.sleep(3)  # Wait before polling again
 
-        # Print final result
-        #print(json.dumps(result_json, indent=2))
-
-        # write returned json to a file
+        # Write returned json to a file
         with open("raw_result.json", "w") as result_file:
             json.dump(result_json, result_file, indent=2)
 
         receipt = extract_json(result_json=result_json)
-
-        # with open("extracted_result.json", "w") as result_file:
-        #     json.dump(receipt, result_file, indent=2)
         
         return receipt
 
