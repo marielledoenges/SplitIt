@@ -48,11 +48,11 @@ struct ContentView: View {
 //                    .onChange(of: capturedImage){
 //                        _ in uploadImage()
 //                    }
-                    .onChange(of: capturedImage) { oldValue, newValue in
-                        if newValue != nil {
-                            uploadImage()
-                        }
-                    }
+//                    .onChange(of: capturedImage) { oldValue, newValue in
+//                        if newValue != nil {
+//                            uploadImage()
+//                        }
+//                    }
 
                 }
                 
@@ -69,7 +69,7 @@ struct ContentView: View {
             print("No image to upload")
             return
         }
-
+ 
         let url = URL(string: "https://your-api-endpoint.com/upload")! // Replace with your API URL
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
