@@ -9,11 +9,33 @@ import SwiftUI
 import UIKit
 import FirebaseFirestore
 
+struct Item: Identifiable, Hashable, Decodable {
+    let id = UUID()
+    let description: String
+    let price: Double
+
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+
+    static func == (lhs: Item, rhs: Item) -> Bool {
+        lhs.id == rhs.id
+    }
+}
+
+struct Receipt: Decodable {
+    let items: [Item]
+    let total: Double
+    let total_tax: Double
+    let tip: Double
+}
+
 struct ContentView: View {
     @State private var showCamera = false
     @State private var capturedImage: UIImage?
     @State private var responseText: String = ""
     @State private var showResponseView = false
+    @State private var items: [Item] = []
 
     var body: some View {
         NavigationStack {
@@ -70,8 +92,8 @@ struct ContentView: View {
                 CameraView(image: $capturedImage)
             }
             .navigationDestination(isPresented: $showResponseView) {
-               // ResponseView(responseText: responseText)
-                ResponseView()
+                AssignmentView(items: items)
+                //ResponseView()
             }
         }
     }
@@ -82,7 +104,8 @@ struct ContentView: View {
             return
         }
 
-        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")! // replace 127.0.0.1 with your local IP address
+        let url = URL(string: "http://10.136.104.193:8000/upload-receipt/")!
+        //replace 127.0.0.1 with your local IP address
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
@@ -142,21 +165,27 @@ struct ContentView: View {
         let deviceID = UIDevice.current.identifierForVendor?.uuidString ?? UUID().uuidString
 
         // Define models matching your JSON structure
-        struct Item: Decodable {
-            let description: String
-            let price: Double
-        }
-
-        struct Receipt: Decodable {
-            let items: [Item]
-            let total: Double
-            let total_tax: Double
-            let tip: Double
-        }
 
         do {
+//            let decoded = try JSONDecoder().decode(Receipt.self, from: jsonData)
+//
+//            let itemsArray = decoded.items.map { ["description": $0.description, "price": $0.price] }
+//
+//            let dataToUpload: [String: Any] = [
+//                "items": itemsArray,
+//                "total": decoded.total,
+//                "total_tax": decoded.total_tax,
+//                "tip": decoded.tip
+//            ]
             let decoded = try JSONDecoder().decode(Receipt.self, from: jsonData)
 
+            // 🔁 Update UI or @State on main thread
+            DispatchQueue.main.async {
+                self.items = decoded.items  // <--- Make sure you have @State var items in your ContentView
+                self.showResponseView = true
+            }
+
+            // If you still want to upload to Firestore as well:
             let itemsArray = decoded.items.map { ["description": $0.description, "price": $0.price] }
 
             let dataToUpload: [String: Any] = [
