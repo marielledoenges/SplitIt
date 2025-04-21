@@ -94,6 +94,11 @@ struct AssignmentView: View {
                             getTotal: totalFor,
                             onAssignTapped: {
                                 selectedPersonID = person.id
+                            },
+                            onNameChanged: { newName in
+                                if let index = people.firstIndex(where: { $0.id == person.id }) {
+                                    people[index].name = newName
+                                }
                             }
                         )
                     }
@@ -189,6 +194,8 @@ struct AssignItemsView: View {
 }
 
 struct PersonCardView: View {
+    @State private var isEditingName = false
+    @State private var editedName: String = ""
     let person: Person
     let sharedItemCounts: [UUID: Int]
     let tax: Double
@@ -198,15 +205,45 @@ struct PersonCardView: View {
     let getTip: (Person) -> Double
     let getTotal: (Person) -> Double
     var onAssignTapped: () -> Void
+    var onNameChanged: (String) -> Void
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
-                Text(person.name)
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .foregroundColor(.black)
+                if isEditingName {
+                    TextField("Name", text: $editedName, onCommit: {
+                        onNameChanged(editedName)
+                        isEditingName = false
+                    })
+                    .textFieldStyle(PlainTextFieldStyle())
+                    .font(.title2.bold())                
+                    .foregroundColor(.black)   
+                    .frame(maxWidth: 150)
+
+                    Button(action: {
+                        isEditingName = false
+                    }) {
+                        Image(systemName: "checkmark.circle")
+                            .foregroundColor(.green)
+                    }
+                } else {
+                    Text(person.name)
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .foregroundColor(.black)
+                        .lineLimit(1)
+
+                    Button(action: {
+                        editedName = person.name
+                        isEditingName = true
+                    }) {
+                        Image(systemName: "pencil")
+                            .foregroundColor(.blue)
+                    }
+                }
+
                 Spacer()
+
                 Button("Assign Items") {
                     onAssignTapped()
                 }
@@ -279,3 +316,4 @@ struct Person: Identifiable {
 struct SheetPerson: Identifiable {
     var id: UUID
 }
+
