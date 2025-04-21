@@ -1,4 +1,20 @@
 # SplitIt
+
+## How to run this project
+1. Clone the repo
+2. Create and activate a virtual environment
+```
+python -m venv venv
+source venv/bin/activate   # On Windows: venv\Scripts\activate
+```
+3. Install dependencies
+```
+pip install -r requirements.txt
+```
+
+## Receipt Parsing Data Schema
+The Azure Document Intelligence API is used to parse receipt text.
+
 Receipt JSON Schema: https://github.com/Azure-Samples/document-intelligence-code-samples/blob/main/schema/2024-11-30-ga/receipt.md
 
 Within "analyzeResult", we are only interested in "documents". Depending on the "docType" ("receipt", "receipt.retailMeal", "receipt.creditCard", "receipt.gas", "receipt.hotel"), there will be different schemas.
