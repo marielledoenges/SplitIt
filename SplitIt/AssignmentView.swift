@@ -90,9 +90,14 @@ struct AssignmentView: View {
                 get: { selectedPersonID.map { SheetPerson(id: $0) } },
                 set: { selectedPersonID = $0?.id }
             )) { sheetPerson in
+                let selectedPerson = people.first(where: { $0.id == sheetPerson.id })!
+                let itemCounts = Dictionary(grouping: people.flatMap { $0.items }, by: { $0 })
+                    .mapValues { $0.count }
+
                 AssignItemsView(
                     allItems: items,
-                    assignedItems: people.first(where: { $0.id == sheetPerson.id })?.items ?? [],
+                    assignedItems: selectedPerson.items,
+                    assignedCounts: itemCounts,
                     onSave: { newItems in
                         if let index = people.firstIndex(where: { $0.id == sheetPerson.id }) {
                             people[index].items = newItems
@@ -108,6 +113,7 @@ struct AssignmentView: View {
 struct AssignItemsView: View {
     let allItems: [Item]
     var assignedItems: [Item]
+    var assignedCounts: [Item: Int] // ← added
     var onSave: ([Item]) -> Void
 
     @State private var selected: Set<Item> = []
@@ -117,12 +123,20 @@ struct AssignItemsView: View {
         NavigationView {
             List(allItems, id: \.self, selection: $selected) { item in
                 HStack {
-                    Text(item.description)
+                    VStack(alignment: .leading) {
+                        Text(item.description)
+                        if let count = assignedCounts[item], count > 0 {
+                            Text("Assigned to \(count) \(count == 1 ? "person" : "people")")
+                                .font(.caption)
+                                .foregroundColor(.secondary)
+                        }
+                    }
                     Spacer()
                     Text(String(format: "$%.2f", item.price))
+                        .foregroundColor(.gray)
                 }
             }
-            .environment(\.editMode, .constant(.active)) // Enables multi-select UI
+            .environment(\.editMode, .constant(.active))
             .onAppear {
                 selected = Set(assignedItems)
             }
