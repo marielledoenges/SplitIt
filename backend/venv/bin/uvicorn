@@ -1,5 +1,5 @@
 #!/bin/sh
-'''exec' "/Users/michellevu/Desktop/Split It/backend/venv/bin/python" "$0" "$@"
+'''exec' "/Users/Ian/Library/Mobile Documents/com~apple~CloudDocs/College/University of Florida/Marielle/SplitIt/backend/venv/bin/python3.10" "$0" "$@"
 ' '''
 # -*- coding: utf-8 -*-
 import re
