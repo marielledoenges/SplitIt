@@ -104,7 +104,7 @@ struct ContentView: View {
             return
         }
 
-        let url = URL(string: "http://10.136.104.193:8000/upload-receipt/")!
+        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")!
         //replace 127.0.0.1 with your local IP address
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
