@@ -36,6 +36,7 @@ struct ContentView: View {
     @State private var responseText: String = ""
     @State private var showResponseView = false
     @State private var items: [Item] = []
+    @State private var isUploading = false
 
     var body: some View {
         NavigationStack {
@@ -87,6 +88,24 @@ struct ContentView: View {
                     Spacer()
                 }
                 .padding(.top, 100)
+                if isUploading {
+                    Color.black.opacity(0.6) // More dimmed background
+                        .ignoresSafeArea()
+
+                    VStack(spacing: 16) {
+                        ProgressView()
+                            .scaleEffect(1.5)
+                            .progressViewStyle(CircularProgressViewStyle(tint: .black)) // Darker spinner
+
+                        Text("Uploading...")
+                            .foregroundColor(.black) // Darker text
+                            .fontWeight(.semibold)
+                    }
+                    .padding(32)
+                    .background(Color.white)
+                    .cornerRadius(16)
+                    .shadow(radius: 10)
+                }
             }
             .sheet(isPresented: $showCamera) {  // Presents the camera when true
                 CameraView(image: $capturedImage)
@@ -104,40 +123,36 @@ struct ContentView: View {
             return
         }
 
-        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")!
-        //replace 127.0.0.1 with your local IP address
+        isUploading = true  // Start loading
+
+        let url = URL(string: "http://192.168.1.112:8000/upload-receipt/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 
-        // Create boundary
         let boundary = "Boundary-\(UUID().uuidString)"
         request.setValue("multipart/form-data; boundary=\(boundary)", forHTTPHeaderField: "Content-Type")
 
-        // Create body data
         var body = Data()
-
-        // Add the image to the body
-        let filename = "receipt.jpg"  // You can change the file name
+        let filename = "receipt.jpg"
         body.append("--\(boundary)\r\n".data(using: .utf8)!)
         body.append("Content-Disposition: form-data; name=\"file\"; filename=\"\(filename)\"\r\n".data(using: .utf8)!)
         body.append("Content-Type: image/jpeg\r\n\r\n".data(using: .utf8)!)
         body.append(imageData)
         body.append("\r\n".data(using: .utf8)!)
-
-        // Close the body with boundary
         body.append("--\(boundary)--\r\n".data(using: .utf8)!)
 
-        // Set the body for the request
         request.httpBody = body
 
-        // Perform the upload request
         URLSession.shared.dataTask(with: request) { data, response, error in
+            DispatchQueue.main.async {
+                isUploading = false // Stop loading no matter what
+            }
+
             if let error = error {
                 print("Upload failed:", error)
                 return
             }
-            
-            // Check the response and print the result
+
             if let response = response as? HTTPURLResponse, response.statusCode == 200 {
                 print("Upload successful!")
                 if let data = data {
@@ -146,7 +161,7 @@ struct ContentView: View {
                         self.responseText = responseString
                         self.showResponseView = true
                         print("ResponseView loaded with responseText:", responseText)
-                        // Convert string back to Data
+
                         if let jsonData = responseString.data(using: .utf8) {
                             uploadReceiptToFirestore(from: jsonData)
                         } else {
