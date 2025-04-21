@@ -133,7 +133,7 @@ struct ContentView: View {
 
         isUploading = true  // Start loading
 
-        let url = URL(string: "http://192.168.1.112:8000/upload-receipt/")!
+        let url = URL(string: "http://127.0.0.1:8000/upload-receipt/")!
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
 

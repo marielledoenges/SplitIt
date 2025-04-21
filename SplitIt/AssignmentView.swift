@@ -44,6 +44,21 @@ struct AssignmentView: View {
     func totalFor(_ person: Person) -> Double {
         personSubtotal(person) + taxFor(person) + tipFor(person)
     }
+    
+    func shareBillSplit() {
+        let summary = people.map { person in
+            let total = String(format: "$%.2f", totalFor(person))
+            return "\(person.name): \(total)"
+        }.joined(separator: "\n")
+
+        let activityVC = UIActivityViewController(activityItems: [summary], applicationActivities: nil)
+
+        // Present the activity view controller
+        if let scene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
+           let rootVC = scene.windows.first?.rootViewController {
+            rootVC.present(activityVC, animated: true, completion: nil)
+        }
+    }
 
 
     var body: some View {
@@ -82,6 +97,20 @@ struct AssignmentView: View {
                         )
                     }
                 }
+                
+//                Text("Share Your Split")
+//                    .font(.headline)
+//                    .foregroundColor(.primary)   // Adapts to black in light mode, white in dark mode
+//                    .padding(.top)
+                Button(action: shareBillSplit) {
+                    Label("Share Your Split", systemImage: "square.and.arrow.up")
+                        .padding()
+                        .foregroundColor(.white)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                }
+                .padding(.bottom)
+
 
                 Spacer()
             }
