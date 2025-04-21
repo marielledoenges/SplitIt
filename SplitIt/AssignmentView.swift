@@ -71,6 +71,7 @@ struct AssignmentView: View {
                         if !newName.isEmpty {
                             people.append(Person(name: newName))
                             newName = ""
+                            UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }
                     }
                 }
