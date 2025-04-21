@@ -35,8 +35,8 @@ struct ContentView: View {
     @State private var capturedImage: UIImage?
     @State private var responseText: String = ""
     @State private var showResponseView = false
-    @State private var items: [Item] = []
     @State private var isUploading = false
+    @State private var receipt: Receipt?
 
     var body: some View {
         NavigationStack {
@@ -111,8 +111,16 @@ struct ContentView: View {
                 CameraView(image: $capturedImage)
             }
             .navigationDestination(isPresented: $showResponseView) {
-                AssignmentView(items: items)
-                //ResponseView()
+                if let receipt = receipt {
+                    AssignmentView(
+                        items: receipt.items,
+                        total: receipt.total,
+                        tax: receipt.total_tax,
+                        tip: receipt.tip
+                    )
+                } else {
+                    Text("No receipt loaded.")
+                }
             }
         }
     }
@@ -182,21 +190,12 @@ struct ContentView: View {
         // Define models matching your JSON structure
 
         do {
-//            let decoded = try JSONDecoder().decode(Receipt.self, from: jsonData)
-//
-//            let itemsArray = decoded.items.map { ["description": $0.description, "price": $0.price] }
-//
-//            let dataToUpload: [String: Any] = [
-//                "items": itemsArray,
-//                "total": decoded.total,
-//                "total_tax": decoded.total_tax,
-//                "tip": decoded.tip
-//            ]
+            
             let decoded = try JSONDecoder().decode(Receipt.self, from: jsonData)
 
             // 🔁 Update UI or @State on main thread
             DispatchQueue.main.async {
-                self.items = decoded.items  // <--- Make sure you have @State var items in your ContentView
+                self.receipt = decoded
                 self.showResponseView = true
             }
 

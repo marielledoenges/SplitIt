@@ -6,11 +6,45 @@ struct AssignmentView: View {
     @State private var selectedPersonID: UUID? = nil
 
     let items: [Item]
+    let total: Double
+    let tax: Double
+    let tip: Double
     
     var sharedItemCounts: [UUID: Int] {
         Dictionary(grouping: people.flatMap { $0.items }, by: { $0.id })
             .mapValues { $0.count }
     }
+    
+    // Total subtotal of all assigned items (used for proportion)
+    var totalSubtotal: Double {
+        people.flatMap { $0.items }.reduce(0) { $0 + $1.price }
+    }
+
+    // Calculate each person’s subtotal (based on shared item counts)
+    func personSubtotal(_ person: Person) -> Double {
+        person.items.reduce(0) { total, item in
+            let count = sharedItemCounts[item.id] ?? 1
+            return total + (item.price / Double(count))
+        }
+    }
+
+    // Person’s proportional tax
+    func taxFor(_ person: Person) -> Double {
+        guard totalSubtotal > 0 else { return 0 }
+        return (personSubtotal(person) / totalSubtotal) * tax
+    }
+
+    // Person’s proportional tip
+    func tipFor(_ person: Person) -> Double {
+        guard totalSubtotal > 0 else { return 0 }
+        return (personSubtotal(person) / totalSubtotal) * tip
+    }
+
+    // Person’s final total
+    func totalFor(_ person: Person) -> Double {
+        personSubtotal(person) + taxFor(person) + tipFor(person)
+    }
+
 
     var body: some View {
         NavigationView {
@@ -32,61 +66,20 @@ struct AssignmentView: View {
                     
                     ForEach(people.indices, id: \.self) { index in
                         let person = people[index]
-                        VStack(alignment: .leading, spacing: 10) {
-                            HStack {
-                                Text(person.name)
-                                    .font(.title2)
-                                    .fontWeight(.bold)
-                                    .foregroundColor(.black)
-                                Spacer()
-                                Button("Assign Items") {
-                                    selectedPersonID = person.id
-                                }
-                            }
-                            
-                            ForEach(person.items, id: \.id) { item in
-                                let count = sharedItemCounts[item.id] ?? 1
-                                let splitPrice = item.price / Double(count)
-                                
-                                HStack {
-                                    Text(item.description)
-                                        .foregroundColor(.gray)
-                                    Spacer()
-                                    Text(String(format: "$%.2f", splitPrice))
-                                        .foregroundColor(.gray)
-                                }
-                            }
 
-
-                            Divider()
-                            
-                            HStack {
-                                Text("Tax:")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.black)
-                                Spacer()
-
-                                Text(String(format: "$%.2f", person.total(sharedItemCounts: sharedItemCounts)))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.black)
+                        PersonCardView(
+                            person: person,
+                            sharedItemCounts: sharedItemCounts,
+                            tax: tax,
+                            tip: tip,
+                            getSubtotal: personSubtotal,
+                            getTax: taxFor,
+                            getTip: tipFor,
+                            getTotal: totalFor,
+                            onAssignTapped: {
+                                selectedPersonID = person.id
                             }
-                            
-                            HStack {
-                                Text("Total:")
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.black)
-                                Spacer()
-
-                                Text(String(format: "$%.2f", person.total(sharedItemCounts: sharedItemCounts)))
-                                    .fontWeight(.semibold)
-                                    .foregroundColor(.black)
-                            }
-                        }
-                        .padding()
-                        .background(Color.white)
-                        .cornerRadius(12)
-                        .shadow(radius: 4)
-                        .padding(.horizontal)
+                        )
                     }
                 }
 
@@ -150,6 +143,80 @@ struct AssignItemsView: View {
         }
     }
 }
+
+struct PersonCardView: View {
+    let person: Person
+    let sharedItemCounts: [UUID: Int]
+    let tax: Double
+    let tip: Double
+    let getSubtotal: (Person) -> Double
+    let getTax: (Person) -> Double
+    let getTip: (Person) -> Double
+    let getTotal: (Person) -> Double
+    var onAssignTapped: () -> Void
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text(person.name)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.black)
+                Spacer()
+                Button("Assign Items") {
+                    onAssignTapped()
+                }
+            }
+
+            ForEach(person.items, id: \.id) { item in
+                let count = sharedItemCounts[item.id] ?? 1
+                let splitPrice = item.price / Double(count)
+                HStack {
+                    Text(item.description)
+                        .foregroundColor(.gray)
+                    Spacer()
+                    Text(String(format: "$%.2f", splitPrice))
+                        .foregroundColor(.gray)
+                }
+            }
+
+            Divider()
+
+            Group {
+                HStack {
+                    Text("Subtotal:")
+                    Spacer()
+                    Text(String(format: "$%.2f", getSubtotal(person)))
+                }
+                HStack {
+                    Text("Tax:")
+                    Spacer()
+                    Text(String(format: "$%.2f", getTax(person)))
+                }
+                HStack {
+                    Text("Tip:")
+                    Spacer()
+                    Text(String(format: "$%.2f", getTip(person)))
+                }
+                Divider()
+                HStack {
+                    Text("Total:")
+                        .fontWeight(.semibold)
+                    Spacer()
+                    Text(String(format: "$%.2f", getTotal(person)))
+                        .fontWeight(.semibold)
+                }
+            }
+            .foregroundColor(.black)
+        }
+        .padding()
+        .background(Color.white)
+        .cornerRadius(12)
+        .shadow(radius: 4)
+        .padding(.horizontal)
+    }
+}
+
 
 struct Person: Identifiable {
     let id = UUID()
