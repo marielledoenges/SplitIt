@@ -9,21 +9,23 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>SeniorProject.SplitIt</string>
+	<string>tvu_SeniorProject.SplitIt</string>
 	<key>PROJECT_ID</key>
 	<string>splitit-9196e</string>
 	<key>STORAGE_BUCKET</key>
 	<string>splitit-9196e.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string>Split It needs access to your local network to connect to the server.</string>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:338795635417:ios:ca09852e73ce8bc64794c8</string>
 </dict>
