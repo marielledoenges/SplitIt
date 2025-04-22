@@ -1,0 +1,6181 @@
+{
+  "status": "succeeded",
+  "createdDateTime": "2025-04-22T16:36:10Z",
+  "lastUpdatedDateTime": "2025-04-22T16:36:13Z",
+  "analyzeResult": {
+    "apiVersion": "2023-07-31",
+    "modelId": "prebuilt-receipt",
+    "stringIndexType": "textElements",
+    "content": "EnToen Emily E\nDT#243\n1 (20) Traditional Wings\n$27.49\nRanch Sauce\n$0.00\nRanch Sauce\n$0.00\nW -* Tongue Torch Sauce*\n$0.00\n1 Regular Fries\n$2.59\n1 Vanilla Shake\n$4.99\nNO Cherry\n$0.00\n1 ZaxSeas Surf & Turf Meal\n$11.99\n1 ZaxSees Surf & Turf Meal\nZaxtail Sauce\n$0.00\nZax Sauce\n1 Regular Fries\n$0.00\n1 Small Water Cup\n1 Chocolate Shake\n2 #1 Big Zax Snack Meal (@7.29)\n$4.99\n$14.58\n2 Big Zax Snack\nZax Sauce\n$0.00\n2 Regular Fries\n2 Small Water Cup\n1 #1 Big Zax Snack Meal\n1 Big Zax Snack\n$10.79\nSauce\n1 Regular Fries\n$0.00\n1 Birthday Cake Shake\n1 3 Nibblerz Meal\n1 3 Nibblerz\n$9.19\n1 Regular Fries\n1 Small Drink\nCoke\n1 #1 Big Zax Snack Meal\n$0.00\n1 Big Zax Snack\n$8.29\nZax Sauce\n1 Regular Fries\n$0.00\n1 Small Drink\nCoke\n1 SurveyItem\n$0.00\n$0.00\nSub Total\n$07.70\nSales Tax\n$7.12\nOrder Total\n$102.002\nVisa\n$102.02\nAUTHORIZED AMOUNT\n$102.02\nCard#: ************ 1081\nAuthorization: 051221\nAID: A/000031010\nUrder Closed <\nBIG ZAX SNAK with soy\ng Zas Snak by tellus\nVisit mi\nendback( com sind ev\nTH\u1ecaVNUMTKTE584U",
+    "pages": [
+      {
+        "pageNumber": 1,
+        "angle": 1.1934829950332642,
+        "width": 3024,
+        "height": 4032,
+        "unit": "pixel",
+        "words": [
+          {
+            "content": "EnToen",
+            "polygon": [
+              1016,
+              2,
+              1214,
+              1,
+              1214,
+              42,
+              1016,
+              43
+            ],
+            "confidence": 0.524,
+            "span": {
+              "offset": 0,
+              "length": 6
+            }
+          },
+          {
+            "content": "Emily",
+            "polygon": [
+              1270,
+              1,
+              1398,
+              1,
+              1398,
+              41,
+              1270,
+              42
+            ],
+            "confidence": 0.577,
+            "span": {
+              "offset": 7,
+              "length": 5
+            }
+          },
+          {
+            "content": "E",
+            "polygon": [
+              1425,
+              1,
+              1446,
+              1,
+              1446,
+              40,
+              1425,
+              41
+            ],
+            "confidence": 0.511,
+            "span": {
+              "offset": 13,
+              "length": 1
+            }
+          },
+          {
+            "content": "DT#243",
+            "polygon": [
+              1403,
+              143,
+              1715,
+              144,
+              1716,
+              235,
+              1400,
+              235
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 15,
+              "length": 6
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1049,
+              365,
+              1081,
+              365,
+              1082,
+              427,
+              1050,
+              426
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 22,
+              "length": 1
+            }
+          },
+          {
+            "content": "(20)",
+            "polygon": [
+              1101,
+              365,
+              1210,
+              367,
+              1210,
+              429,
+              1102,
+              427
+            ],
+            "confidence": 0.876,
+            "span": {
+              "offset": 24,
+              "length": 4
+            }
+          },
+          {
+            "content": "Traditional",
+            "polygon": [
+              1234,
+              367,
+              1528,
+              374,
+              1527,
+              435,
+              1234,
+              429
+            ],
+            "confidence": 0.959,
+            "span": {
+              "offset": 29,
+              "length": 11
+            }
+          },
+          {
+            "content": "Wings",
+            "polygon": [
+              1544,
+              374,
+              1682,
+              378,
+              1680,
+              438,
+              1543,
+              436
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 41,
+              "length": 5
+            }
+          },
+          {
+            "content": "$27.49",
+            "polygon": [
+              1936,
+              383,
+              2098,
+              383,
+              2098,
+              441,
+              1936,
+              440
+            ],
+            "confidence": 0.983,
+            "span": {
+              "offset": 47,
+              "length": 6
+            }
+          },
+          {
+            "content": "Ranch",
+            "polygon": [
+              1124,
+              434,
+              1260,
+              436,
+              1259,
+              497,
+              1123,
+              496
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 54,
+              "length": 5
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1284,
+              436,
+              1418,
+              439,
+              1416,
+              500,
+              1283,
+              497
+            ],
+            "confidence": 0.962,
+            "span": {
+              "offset": 60,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1961,
+              451,
+              2095,
+              451,
+              2095,
+              509,
+              1961,
+              509
+            ],
+            "confidence": 0.873,
+            "span": {
+              "offset": 66,
+              "length": 5
+            }
+          },
+          {
+            "content": "Ranch",
+            "polygon": [
+              1124,
+              503,
+              1259,
+              505,
+              1259,
+              566,
+              1123,
+              564
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 72,
+              "length": 5
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1283,
+              506,
+              1416,
+              508,
+              1416,
+              569,
+              1283,
+              566
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 78,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1959,
+              518,
+              2094,
+              519,
+              2093,
+              579,
+              1959,
+              577
+            ],
+            "confidence": 0.945,
+            "span": {
+              "offset": 84,
+              "length": 5
+            }
+          },
+          {
+            "content": "W",
+            "polygon": [
+              1121,
+              573,
+              1141,
+              574,
+              1141,
+              633,
+              1121,
+              633
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 90,
+              "length": 1
+            }
+          },
+          {
+            "content": "-*",
+            "polygon": [
+              1153,
+              574,
+              1196,
+              575,
+              1196,
+              634,
+              1153,
+              634
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 92,
+              "length": 2
+            }
+          },
+          {
+            "content": "Tongue",
+            "polygon": [
+              1208,
+              575,
+              1364,
+              578,
+              1364,
+              638,
+              1207,
+              635
+            ],
+            "confidence": 0.93,
+            "span": {
+              "offset": 95,
+              "length": 6
+            }
+          },
+          {
+            "content": "Torch",
+            "polygon": [
+              1391,
+              578,
+              1517,
+              580,
+              1516,
+              640,
+              1391,
+              638
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 102,
+              "length": 5
+            }
+          },
+          {
+            "content": "Sauce*",
+            "polygon": [
+              1544,
+              581,
+              1701,
+              583,
+              1700,
+              642,
+              1543,
+              640
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 108,
+              "length": 6
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1957,
+              590,
+              2087,
+              591,
+              2086,
+              647,
+              1957,
+              645
+            ],
+            "confidence": 0.882,
+            "span": {
+              "offset": 115,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1058,
+              642,
+              1090,
+              643,
+              1088,
+              703,
+              1057,
+              703
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 121,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1102,
+              643,
+              1287,
+              646,
+              1287,
+              706,
+              1100,
+              703
+            ],
+            "confidence": 0.86,
+            "span": {
+              "offset": 123,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1307,
+              646,
+              1442,
+              649,
+              1442,
+              709,
+              1307,
+              706
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 131,
+              "length": 5
+            }
+          },
+          {
+            "content": "$2.59",
+            "polygon": [
+              1948,
+              660,
+              2076,
+              661,
+              2076,
+              712,
+              1948,
+              710
+            ],
+            "confidence": 0.893,
+            "span": {
+              "offset": 137,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1062,
+              710,
+              1091,
+              711,
+              1090,
+              769,
+              1061,
+              769
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 143,
+              "length": 1
+            }
+          },
+          {
+            "content": "Vanilla",
+            "polygon": [
+              1105,
+              711,
+              1289,
+              716,
+              1288,
+              770,
+              1104,
+              769
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 145,
+              "length": 7
+            }
+          },
+          {
+            "content": "Shake",
+            "polygon": [
+              1311,
+              716,
+              1440,
+              718,
+              1439,
+              773,
+              1310,
+              770
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 153,
+              "length": 5
+            }
+          },
+          {
+            "content": "$4.99",
+            "polygon": [
+              1942,
+              725,
+              2068,
+              726,
+              2067,
+              779,
+              1942,
+              777
+            ],
+            "confidence": 0.887,
+            "span": {
+              "offset": 159,
+              "length": 5
+            }
+          },
+          {
+            "content": "NO",
+            "polygon": [
+              1135,
+              780,
+              1187,
+              781,
+              1186,
+              831,
+              1134,
+              829
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 165,
+              "length": 2
+            }
+          },
+          {
+            "content": "Cherry",
+            "polygon": [
+              1213,
+              781,
+              1360,
+              787,
+              1359,
+              836,
+              1212,
+              832
+            ],
+            "confidence": 0.599,
+            "span": {
+              "offset": 168,
+              "length": 6
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1935,
+              787,
+              2062,
+              788,
+              2062,
+              840,
+              1935,
+              838
+            ],
+            "confidence": 0.923,
+            "span": {
+              "offset": 175,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1075,
+              838,
+              1101,
+              838,
+              1100,
+              889,
+              1074,
+              888
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 181,
+              "length": 1
+            }
+          },
+          {
+            "content": "ZaxSeas",
+            "polygon": [
+              1120,
+              839,
+              1293,
+              842,
+              1292,
+              892,
+              1119,
+              889
+            ],
+            "confidence": 0.945,
+            "span": {
+              "offset": 183,
+              "length": 7
+            }
+          },
+          {
+            "content": "Surf",
+            "polygon": [
+              1316,
+              843,
+              1420,
+              845,
+              1419,
+              894,
+              1315,
+              893
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 191,
+              "length": 4
+            }
+          },
+          {
+            "content": "&",
+            "polygon": [
+              1436,
+              845,
+              1469,
+              846,
+              1468,
+              895,
+              1435,
+              895
+            ],
+            "confidence": 0.963,
+            "span": {
+              "offset": 196,
+              "length": 1
+            }
+          },
+          {
+            "content": "Turf",
+            "polygon": [
+              1492,
+              846,
+              1593,
+              848,
+              1592,
+              897,
+              1491,
+              896
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 198,
+              "length": 4
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1609,
+              848,
+              1711,
+              850,
+              1710,
+              899,
+              1608,
+              898
+            ],
+            "confidence": 0.989,
+            "span": {
+              "offset": 203,
+              "length": 4
+            }
+          },
+          {
+            "content": "$11.99",
+            "polygon": [
+              1905,
+              849,
+              2053,
+              849,
+              2053,
+              902,
+              1905,
+              901
+            ],
+            "confidence": 0.88,
+            "span": {
+              "offset": 208,
+              "length": 6
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1203,
+              898,
+              1226,
+              898,
+              1226,
+              941,
+              1203,
+              941
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 215,
+              "length": 1
+            }
+          },
+          {
+            "content": "ZaxSees",
+            "polygon": [
+              1250,
+              898,
+              1414,
+              901,
+              1414,
+              947,
+              1250,
+              942
+            ],
+            "confidence": 0.604,
+            "span": {
+              "offset": 217,
+              "length": 7
+            }
+          },
+          {
+            "content": "Surf",
+            "polygon": [
+              1440,
+              902,
+              1537,
+              904,
+              1537,
+              949,
+              1440,
+              947
+            ],
+            "confidence": 0.948,
+            "span": {
+              "offset": 225,
+              "length": 4
+            }
+          },
+          {
+            "content": "&",
+            "polygon": [
+              1558,
+              904,
+              1587,
+              905,
+              1587,
+              951,
+              1558,
+              950
+            ],
+            "confidence": 0.965,
+            "span": {
+              "offset": 230,
+              "length": 1
+            }
+          },
+          {
+            "content": "Turf",
+            "polygon": [
+              1614,
+              906,
+              1708,
+              908,
+              1708,
+              953,
+              1614,
+              951
+            ],
+            "confidence": 0.985,
+            "span": {
+              "offset": 232,
+              "length": 4
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1725,
+              908,
+              1823,
+              911,
+              1823,
+              955,
+              1725,
+              953
+            ],
+            "confidence": 0.968,
+            "span": {
+              "offset": 237,
+              "length": 4
+            }
+          },
+          {
+            "content": "Zaxtail",
+            "polygon": [
+              1204,
+              949,
+              1370,
+              954,
+              1369,
+              996,
+              1203,
+              993
+            ],
+            "confidence": 0.945,
+            "span": {
+              "offset": 242,
+              "length": 7
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1392,
+              954,
+              1510,
+              958,
+              1509,
+              1001,
+              1391,
+              997
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 250,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1916,
+              971,
+              2036,
+              972,
+              2035,
+              1021,
+              1916,
+              1019
+            ],
+            "confidence": 0.837,
+            "span": {
+              "offset": 256,
+              "length": 5
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1200,
+              1000,
+              1272,
+              1002,
+              1271,
+              1044,
+              1198,
+              1043
+            ],
+            "confidence": 0.965,
+            "span": {
+              "offset": 262,
+              "length": 3
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1292,
+              1002,
+              1412,
+              1006,
+              1411,
+              1048,
+              1291,
+              1045
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 266,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1196,
+              1054,
+              1220,
+              1054,
+              1220,
+              1101,
+              1196,
+              1101
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 272,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1235,
+              1055,
+              1406,
+              1057,
+              1405,
+              1103,
+              1235,
+              1101
+            ],
+            "confidence": 0.962,
+            "span": {
+              "offset": 274,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1430,
+              1057,
+              1555,
+              1059,
+              1553,
+              1107,
+              1429,
+              1103
+            ],
+            "confidence": 0.668,
+            "span": {
+              "offset": 282,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1915,
+              1028,
+              2035,
+              1029,
+              2034,
+              1073,
+              1915,
+              1071
+            ],
+            "confidence": 0.94,
+            "span": {
+              "offset": 288,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1194,
+              1110,
+              1218,
+              1110,
+              1218,
+              1156,
+              1194,
+              1156
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 294,
+              "length": 1
+            }
+          },
+          {
+            "content": "Small",
+            "polygon": [
+              1237,
+              1110,
+              1361,
+              1111,
+              1361,
+              1157,
+              1237,
+              1156
+            ],
+            "confidence": 0.976,
+            "span": {
+              "offset": 296,
+              "length": 5
+            }
+          },
+          {
+            "content": "Water",
+            "polygon": [
+              1379,
+              1111,
+              1503,
+              1113,
+              1503,
+              1161,
+              1379,
+              1158
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 302,
+              "length": 5
+            }
+          },
+          {
+            "content": "Cup",
+            "polygon": [
+              1528,
+              1113,
+              1599,
+              1115,
+              1599,
+              1164,
+              1528,
+              1162
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 308,
+              "length": 3
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1069,
+              1157,
+              1094,
+              1158,
+              1094,
+              1207,
+              1069,
+              1207
+            ],
+            "confidence": 0.941,
+            "span": {
+              "offset": 312,
+              "length": 1
+            }
+          },
+          {
+            "content": "Chocolate",
+            "polygon": [
+              1109,
+              1158,
+              1331,
+              1165,
+              1330,
+              1212,
+              1109,
+              1207
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 314,
+              "length": 9
+            }
+          },
+          {
+            "content": "Shake",
+            "polygon": [
+              1359,
+              1166,
+              1477,
+              1169,
+              1477,
+              1217,
+              1358,
+              1213
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 324,
+              "length": 5
+            }
+          },
+          {
+            "content": "2",
+            "polygon": [
+              1062,
+              1212,
+              1088,
+              1212,
+              1088,
+              1265,
+              1062,
+              1264
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 330,
+              "length": 1
+            }
+          },
+          {
+            "content": "#1",
+            "polygon": [
+              1105,
+              1213,
+              1164,
+              1215,
+              1164,
+              1267,
+              1105,
+              1265
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 332,
+              "length": 2
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1181,
+              1215,
+              1260,
+              1218,
+              1260,
+              1269,
+              1181,
+              1267
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 335,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1283,
+              1218,
+              1359,
+              1221,
+              1359,
+              1271,
+              1283,
+              1269
+            ],
+            "confidence": 0.987,
+            "span": {
+              "offset": 339,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1379,
+              1221,
+              1498,
+              1224,
+              1498,
+              1274,
+              1379,
+              1271
+            ],
+            "confidence": 0.784,
+            "span": {
+              "offset": 343,
+              "length": 5
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1521,
+              1225,
+              1630,
+              1228,
+              1630,
+              1277,
+              1521,
+              1275
+            ],
+            "confidence": 0.984,
+            "span": {
+              "offset": 349,
+              "length": 4
+            }
+          },
+          {
+            "content": "(@7.29)",
+            "polygon": [
+              1653,
+              1228,
+              1813,
+              1232,
+              1812,
+              1282,
+              1653,
+              1278
+            ],
+            "confidence": 0.768,
+            "span": {
+              "offset": 354,
+              "length": 7
+            }
+          },
+          {
+            "content": "$4.99",
+            "polygon": [
+              1915,
+              1186,
+              2040,
+              1186,
+              2040,
+              1232,
+              1915,
+              1231
+            ],
+            "confidence": 0.876,
+            "span": {
+              "offset": 362,
+              "length": 5
+            }
+          },
+          {
+            "content": "$14.58",
+            "polygon": [
+              1890,
+              1241,
+              2041,
+              1239,
+              2041,
+              1285,
+              1891,
+              1285
+            ],
+            "confidence": 0.651,
+            "span": {
+              "offset": 368,
+              "length": 6
+            }
+          },
+          {
+            "content": "2",
+            "polygon": [
+              1183,
+              1272,
+              1209,
+              1274,
+              1209,
+              1325,
+              1182,
+              1325
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 375,
+              "length": 1
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1226,
+              1274,
+              1305,
+              1278,
+              1304,
+              1326,
+              1225,
+              1325
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 377,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1328,
+              1278,
+              1404,
+              1280,
+              1404,
+              1329,
+              1328,
+              1327
+            ],
+            "confidence": 0.974,
+            "span": {
+              "offset": 381,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1424,
+              1280,
+              1546,
+              1280,
+              1546,
+              1332,
+              1424,
+              1329
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 385,
+              "length": 5
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1180,
+              1331,
+              1252,
+              1333,
+              1252,
+              1381,
+              1180,
+              1380
+            ],
+            "confidence": 0.559,
+            "span": {
+              "offset": 391,
+              "length": 3
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1277,
+              1334,
+              1397,
+              1338,
+              1396,
+              1386,
+              1277,
+              1382
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 395,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1916,
+              1345,
+              2046,
+              1347,
+              2046,
+              1405,
+              1916,
+              1403
+            ],
+            "confidence": 0.94,
+            "span": {
+              "offset": 401,
+              "length": 5
+            }
+          },
+          {
+            "content": "2",
+            "polygon": [
+              1177,
+              1389,
+              1203,
+              1390,
+              1202,
+              1440,
+              1177,
+              1439
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 407,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1222,
+              1391,
+              1395,
+              1397,
+              1394,
+              1445,
+              1222,
+              1441
+            ],
+            "confidence": 0.973,
+            "span": {
+              "offset": 409,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1417,
+              1397,
+              1545,
+              1400,
+              1544,
+              1448,
+              1416,
+              1446
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 417,
+              "length": 5
+            }
+          },
+          {
+            "content": "2",
+            "polygon": [
+              1176,
+              1448,
+              1202,
+              1449,
+              1201,
+              1499,
+              1175,
+              1499
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 423,
+              "length": 1
+            }
+          },
+          {
+            "content": "Small",
+            "polygon": [
+              1222,
+              1449,
+              1349,
+              1453,
+              1348,
+              1502,
+              1221,
+              1499
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 425,
+              "length": 5
+            }
+          },
+          {
+            "content": "Water",
+            "polygon": [
+              1365,
+              1453,
+              1492,
+              1458,
+              1491,
+              1507,
+              1364,
+              1503
+            ],
+            "confidence": 0.973,
+            "span": {
+              "offset": 431,
+              "length": 5
+            }
+          },
+          {
+            "content": "Cup",
+            "polygon": [
+              1518,
+              1458,
+              1593,
+              1461,
+              1592,
+              1511,
+              1517,
+              1508
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 437,
+              "length": 3
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1051,
+              1504,
+              1077,
+              1505,
+              1078,
+              1558,
+              1052,
+              1557
+            ],
+            "confidence": 0.523,
+            "span": {
+              "offset": 441,
+              "length": 1
+            }
+          },
+          {
+            "content": "#1",
+            "polygon": [
+              1091,
+              1505,
+              1148,
+              1506,
+              1149,
+              1559,
+              1092,
+              1558
+            ],
+            "confidence": 0.862,
+            "span": {
+              "offset": 443,
+              "length": 2
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1165,
+              1507,
+              1246,
+              1509,
+              1247,
+              1561,
+              1166,
+              1559
+            ],
+            "confidence": 0.971,
+            "span": {
+              "offset": 446,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1270,
+              1510,
+              1344,
+              1512,
+              1345,
+              1563,
+              1271,
+              1561
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 450,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1365,
+              1513,
+              1490,
+              1517,
+              1490,
+              1568,
+              1365,
+              1564
+            ],
+            "confidence": 0.732,
+            "span": {
+              "offset": 454,
+              "length": 5
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1510,
+              1517,
+              1609,
+              1521,
+              1609,
+              1572,
+              1510,
+              1568
+            ],
+            "confidence": 0.989,
+            "span": {
+              "offset": 460,
+              "length": 4
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1170,
+              1566,
+              1197,
+              1567,
+              1196,
+              1619,
+              1169,
+              1619
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 465,
+              "length": 1
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1210,
+              1568,
+              1291,
+              1571,
+              1290,
+              1623,
+              1209,
+              1620
+            ],
+            "confidence": 0.707,
+            "span": {
+              "offset": 467,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1315,
+              1572,
+              1389,
+              1575,
+              1388,
+              1626,
+              1314,
+              1623
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 471,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1413,
+              1575,
+              1535,
+              1579,
+              1534,
+              1630,
+              1412,
+              1626
+            ],
+            "confidence": 0.932,
+            "span": {
+              "offset": 475,
+              "length": 5
+            }
+          },
+          {
+            "content": "$10.79",
+            "polygon": [
+              1885,
+              1528,
+              2044,
+              1528,
+              2044,
+              1588,
+              1885,
+              1587
+            ],
+            "confidence": 0.934,
+            "span": {
+              "offset": 481,
+              "length": 6
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1260,
+              1629,
+              1390,
+              1632,
+              1389,
+              1689,
+              1259,
+              1686
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 488,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1167,
+              1688,
+              1194,
+              1689,
+              1192,
+              1741,
+              1165,
+              1740
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 494,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1207,
+              1690,
+              1385,
+              1697,
+              1383,
+              1748,
+              1205,
+              1742
+            ],
+            "confidence": 0.979,
+            "span": {
+              "offset": 496,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1408,
+              1698,
+              1536,
+              1702,
+              1535,
+              1753,
+              1407,
+              1748
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 504,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1907,
+              1655,
+              2034,
+              1655,
+              2034,
+              1707,
+              1907,
+              1706
+            ],
+            "confidence": 0.947,
+            "span": {
+              "offset": 510,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1166,
+              1748,
+              1192,
+              1750,
+              1192,
+              1801,
+              1166,
+              1801
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 516,
+              "length": 1
+            }
+          },
+          {
+            "content": "Birthday",
+            "polygon": [
+              1206,
+              1750,
+              1405,
+              1758,
+              1404,
+              1808,
+              1206,
+              1802
+            ],
+            "confidence": 0.858,
+            "span": {
+              "offset": 518,
+              "length": 8
+            }
+          },
+          {
+            "content": "Cake",
+            "polygon": [
+              1432,
+              1760,
+              1532,
+              1763,
+              1530,
+              1814,
+              1431,
+              1809
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 527,
+              "length": 4
+            }
+          },
+          {
+            "content": "Shake",
+            "polygon": [
+              1558,
+              1764,
+              1681,
+              1769,
+              1679,
+              1820,
+              1557,
+              1815
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 532,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1042,
+              1805,
+              1068,
+              1806,
+              1067,
+              1858,
+              1041,
+              1857
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 538,
+              "length": 1
+            }
+          },
+          {
+            "content": "3",
+            "polygon": [
+              1088,
+              1807,
+              1114,
+              1808,
+              1113,
+              1860,
+              1087,
+              1859
+            ],
+            "confidence": 0.996,
+            "span": {
+              "offset": 540,
+              "length": 1
+            }
+          },
+          {
+            "content": "Nibblerz",
+            "polygon": [
+              1131,
+              1808,
+              1338,
+              1817,
+              1337,
+              1867,
+              1129,
+              1860
+            ],
+            "confidence": 0.991,
+            "span": {
+              "offset": 542,
+              "length": 8
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1355,
+              1818,
+              1455,
+              1823,
+              1453,
+              1870,
+              1353,
+              1867
+            ],
+            "confidence": 0.984,
+            "span": {
+              "offset": 551,
+              "length": 4
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1164,
+              1869,
+              1189,
+              1871,
+              1188,
+              1921,
+              1163,
+              1920
+            ],
+            "confidence": 0.965,
+            "span": {
+              "offset": 556,
+              "length": 1
+            }
+          },
+          {
+            "content": "3",
+            "polygon": [
+              1212,
+              1872,
+              1238,
+              1873,
+              1236,
+              1923,
+              1211,
+              1922
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 558,
+              "length": 1
+            }
+          },
+          {
+            "content": "Nibblerz",
+            "polygon": [
+              1254,
+              1874,
+              1460,
+              1884,
+              1458,
+              1932,
+              1253,
+              1923
+            ],
+            "confidence": 0.962,
+            "span": {
+              "offset": 560,
+              "length": 8
+            }
+          },
+          {
+            "content": "$9.19",
+            "polygon": [
+              1900,
+              1840,
+              2022,
+              1841,
+              2022,
+              1892,
+              1900,
+              1890
+            ],
+            "confidence": 0.82,
+            "span": {
+              "offset": 569,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1163,
+              1930,
+              1188,
+              1932,
+              1186,
+              1980,
+              1161,
+              1979
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 575,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1204,
+              1933,
+              1375,
+              1941,
+              1373,
+              1989,
+              1202,
+              1981
+            ],
+            "confidence": 0.976,
+            "span": {
+              "offset": 577,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1401,
+              1942,
+              1526,
+              1946,
+              1523,
+              1996,
+              1399,
+              1990
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 585,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1163,
+              1990,
+              1188,
+              1991,
+              1186,
+              2040,
+              1161,
+              2039
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 591,
+              "length": 1
+            }
+          },
+          {
+            "content": "Small",
+            "polygon": [
+              1207,
+              1992,
+              1331,
+              1997,
+              1329,
+              2045,
+              1205,
+              2041
+            ],
+            "confidence": 0.984,
+            "span": {
+              "offset": 593,
+              "length": 5
+            }
+          },
+          {
+            "content": "Drink",
+            "polygon": [
+              1351,
+              1998,
+              1472,
+              2003,
+              1470,
+              2052,
+              1348,
+              2046
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 599,
+              "length": 5
+            }
+          },
+          {
+            "content": "Coke",
+            "polygon": [
+              1156,
+              2050,
+              1252,
+              2054,
+              1249,
+              2100,
+              1154,
+              2094
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 605,
+              "length": 4
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1035,
+              2103,
+              1061,
+              2104,
+              1062,
+              2157,
+              1036,
+              2156
+            ],
+            "confidence": 0.994,
+            "span": {
+              "offset": 610,
+              "length": 1
+            }
+          },
+          {
+            "content": "#1",
+            "polygon": [
+              1078,
+              2104,
+              1134,
+              2106,
+              1135,
+              2158,
+              1079,
+              2157
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 612,
+              "length": 2
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1151,
+              2107,
+              1231,
+              2110,
+              1231,
+              2161,
+              1151,
+              2159
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 615,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1251,
+              2111,
+              1331,
+              2114,
+              1330,
+              2164,
+              1251,
+              2162
+            ],
+            "confidence": 0.975,
+            "span": {
+              "offset": 619,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1351,
+              2115,
+              1470,
+              2121,
+              1469,
+              2170,
+              1350,
+              2165
+            ],
+            "confidence": 0.921,
+            "span": {
+              "offset": 623,
+              "length": 5
+            }
+          },
+          {
+            "content": "Meal",
+            "polygon": [
+              1490,
+              2122,
+              1588,
+              2126,
+              1586,
+              2176,
+              1489,
+              2171
+            ],
+            "confidence": 0.987,
+            "span": {
+              "offset": 629,
+              "length": 4
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1891,
+              2082,
+              2012,
+              2082,
+              2012,
+              2130,
+              1891,
+              2130
+            ],
+            "confidence": 0.813,
+            "span": {
+              "offset": 634,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1159,
+              2166,
+              1185,
+              2168,
+              1182,
+              2217,
+              1157,
+              2216
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 640,
+              "length": 1
+            }
+          },
+          {
+            "content": "Big",
+            "polygon": [
+              1197,
+              2168,
+              1271,
+              2172,
+              1269,
+              2220,
+              1195,
+              2217
+            ],
+            "confidence": 0.558,
+            "span": {
+              "offset": 642,
+              "length": 3
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1300,
+              2173,
+              1374,
+              2177,
+              1371,
+              2224,
+              1297,
+              2221
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 646,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snack",
+            "polygon": [
+              1396,
+              2178,
+              1515,
+              2182,
+              1512,
+              2233,
+              1393,
+              2226
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 650,
+              "length": 5
+            }
+          },
+          {
+            "content": "$8.29",
+            "polygon": [
+              1886,
+              2138,
+              2008,
+              2138,
+              2008,
+              2197,
+              1886,
+              2196
+            ],
+            "confidence": 0.862,
+            "span": {
+              "offset": 656,
+              "length": 5
+            }
+          },
+          {
+            "content": "Zax",
+            "polygon": [
+              1156,
+              2226,
+              1233,
+              2230,
+              1232,
+              2277,
+              1154,
+              2273
+            ],
+            "confidence": 0.925,
+            "span": {
+              "offset": 662,
+              "length": 3
+            }
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1249,
+              2231,
+              1368,
+              2236,
+              1367,
+              2284,
+              1247,
+              2278
+            ],
+            "confidence": 0.972,
+            "span": {
+              "offset": 666,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1154,
+              2279,
+              1181,
+              2281,
+              1178,
+              2340,
+              1151,
+              2338
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 672,
+              "length": 1
+            }
+          },
+          {
+            "content": "Regular",
+            "polygon": [
+              1193,
+              2282,
+              1372,
+              2291,
+              1369,
+              2349,
+              1190,
+              2340
+            ],
+            "confidence": 0.966,
+            "span": {
+              "offset": 674,
+              "length": 7
+            }
+          },
+          {
+            "content": "Fries",
+            "polygon": [
+              1387,
+              2291,
+              1518,
+              2297,
+              1515,
+              2354,
+              1384,
+              2350
+            ],
+            "confidence": 0.862,
+            "span": {
+              "offset": 682,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1880,
+              2260,
+              2004,
+              2261,
+              2004,
+              2309,
+              1880,
+              2308
+            ],
+            "confidence": 0.946,
+            "span": {
+              "offset": 688,
+              "length": 5
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1153,
+              2343,
+              1177,
+              2345,
+              1175,
+              2392,
+              1151,
+              2391
+            ],
+            "confidence": 0.987,
+            "span": {
+              "offset": 694,
+              "length": 1
+            }
+          },
+          {
+            "content": "Small",
+            "polygon": [
+              1199,
+              2345,
+              1322,
+              2351,
+              1321,
+              2398,
+              1197,
+              2393
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 696,
+              "length": 5
+            }
+          },
+          {
+            "content": "Drink",
+            "polygon": [
+              1338,
+              2352,
+              1458,
+              2357,
+              1457,
+              2404,
+              1336,
+              2398
+            ],
+            "confidence": 0.738,
+            "span": {
+              "offset": 702,
+              "length": 5
+            }
+          },
+          {
+            "content": "Coke",
+            "polygon": [
+              1147,
+              2405,
+              1245,
+              2409,
+              1243,
+              2451,
+              1145,
+              2446
+            ],
+            "confidence": 0.99,
+            "span": {
+              "offset": 708,
+              "length": 4
+            }
+          },
+          {
+            "content": "1",
+            "polygon": [
+              1030,
+              2459,
+              1054,
+              2460,
+              1053,
+              2508,
+              1029,
+              2508
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 713,
+              "length": 1
+            }
+          },
+          {
+            "content": "SurveyItem",
+            "polygon": [
+              1073,
+              2460,
+              1313,
+              2467,
+              1311,
+              2514,
+              1072,
+              2508
+            ],
+            "confidence": 0.575,
+            "span": {
+              "offset": 715,
+              "length": 10
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1867,
+              2431,
+              1995,
+              2431,
+              1994,
+              2489,
+              1867,
+              2488
+            ],
+            "confidence": 0.924,
+            "span": {
+              "offset": 726,
+              "length": 5
+            }
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1866,
+              2492,
+              1987,
+              2492,
+              1987,
+              2536,
+              1866,
+              2534
+            ],
+            "confidence": 0.769,
+            "span": {
+              "offset": 732,
+              "length": 5
+            }
+          },
+          {
+            "content": "Sub",
+            "polygon": [
+              971,
+              2566,
+              1037,
+              2568,
+              1035,
+              2610,
+              969,
+              2608
+            ],
+            "confidence": 0.995,
+            "span": {
+              "offset": 738,
+              "length": 3
+            }
+          },
+          {
+            "content": "Total",
+            "polygon": [
+              1070,
+              2569,
+              1185,
+              2574,
+              1183,
+              2616,
+              1069,
+              2612
+            ],
+            "confidence": 0.932,
+            "span": {
+              "offset": 742,
+              "length": 5
+            }
+          },
+          {
+            "content": "$07.70",
+            "polygon": [
+              1839,
+              2595,
+              1988,
+              2601,
+              1987,
+              2645,
+              1839,
+              2641
+            ],
+            "confidence": 0.516,
+            "span": {
+              "offset": 748,
+              "length": 6
+            }
+          },
+          {
+            "content": "Sales",
+            "polygon": [
+              952,
+              2669,
+              1076,
+              2676,
+              1073,
+              2723,
+              950,
+              2717
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 755,
+              "length": 5
+            }
+          },
+          {
+            "content": "Tax",
+            "polygon": [
+              1104,
+              2677,
+              1165,
+              2678,
+              1163,
+              2728,
+              1102,
+              2725
+            ],
+            "confidence": 0.574,
+            "span": {
+              "offset": 761,
+              "length": 3
+            }
+          },
+          {
+            "content": "$7.12",
+            "polygon": [
+              1872,
+              2708,
+              1998,
+              2710,
+              1997,
+              2761,
+              1871,
+              2758
+            ],
+            "confidence": 0.945,
+            "span": {
+              "offset": 765,
+              "length": 5
+            }
+          },
+          {
+            "content": "Order",
+            "polygon": [
+              934,
+              2791,
+              1062,
+              2796,
+              1060,
+              2849,
+              932,
+              2843
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 771,
+              "length": 5
+            }
+          },
+          {
+            "content": "Total",
+            "polygon": [
+              1090,
+              2797,
+              1213,
+              2800,
+              1211,
+              2854,
+              1088,
+              2850
+            ],
+            "confidence": 0.972,
+            "span": {
+              "offset": 777,
+              "length": 5
+            }
+          },
+          {
+            "content": "$102.002",
+            "polygon": [
+              1826,
+              2828,
+              2032,
+              2826,
+              2033,
+              2884,
+              1826,
+              2881
+            ],
+            "confidence": 0.611,
+            "span": {
+              "offset": 783,
+              "length": 8
+            }
+          },
+          {
+            "content": "Visa",
+            "polygon": [
+              925,
+              2925,
+              1026,
+              2929,
+              1024,
+              2978,
+              923,
+              2973
+            ],
+            "confidence": 0.962,
+            "span": {
+              "offset": 792,
+              "length": 4
+            }
+          },
+          {
+            "content": "$102.02",
+            "polygon": [
+              1825,
+              2955,
+              2010,
+              2957,
+              2009,
+              3014,
+              1826,
+              3011
+            ],
+            "confidence": 0.822,
+            "span": {
+              "offset": 797,
+              "length": 7
+            }
+          },
+          {
+            "content": "AUTHORIZED",
+            "polygon": [
+              918,
+              2991,
+              1176,
+              2998,
+              1176,
+              3052,
+              918,
+              3045
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 805,
+              "length": 10
+            }
+          },
+          {
+            "content": "AMOUNT",
+            "polygon": [
+              1201,
+              2999,
+              1358,
+              3004,
+              1357,
+              3058,
+              1200,
+              3053
+            ],
+            "confidence": 0.979,
+            "span": {
+              "offset": 816,
+              "length": 6
+            }
+          },
+          {
+            "content": "$102.02",
+            "polygon": [
+              1828,
+              3020,
+              2012,
+              3022,
+              2012,
+              3081,
+              1827,
+              3080
+            ],
+            "confidence": 0.723,
+            "span": {
+              "offset": 823,
+              "length": 7
+            }
+          },
+          {
+            "content": "Card#:",
+            "polygon": [
+              1019,
+              3060,
+              1177,
+              3064,
+              1177,
+              3113,
+              1020,
+              3109
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 831,
+              "length": 6
+            }
+          },
+          {
+            "content": "************",
+            "polygon": [
+              1200,
+              3064,
+              1509,
+              3076,
+              1510,
+              3127,
+              1200,
+              3114
+            ],
+            "confidence": 0.509,
+            "span": {
+              "offset": 838,
+              "length": 12
+            }
+          },
+          {
+            "content": "1081",
+            "polygon": [
+              1519,
+              3076,
+              1612,
+              3081,
+              1612,
+              3132,
+              1519,
+              3127
+            ],
+            "confidence": 0.983,
+            "span": {
+              "offset": 851,
+              "length": 4
+            }
+          },
+          {
+            "content": "Authorization:",
+            "polygon": [
+              1015,
+              3127,
+              1389,
+              3130,
+              1389,
+              3187,
+              1015,
+              3173
+            ],
+            "confidence": 0.878,
+            "span": {
+              "offset": 856,
+              "length": 14
+            }
+          },
+          {
+            "content": "051221",
+            "polygon": [
+              1407,
+              3131,
+              1563,
+              3138,
+              1563,
+              3191,
+              1406,
+              3187
+            ],
+            "confidence": 0.993,
+            "span": {
+              "offset": 871,
+              "length": 6
+            }
+          },
+          {
+            "content": "AID:",
+            "polygon": [
+              909,
+              3311,
+              1018,
+              3304,
+              1019,
+              3357,
+              911,
+              3358
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 878,
+              "length": 4
+            }
+          },
+          {
+            "content": "A/000031010",
+            "polygon": [
+              1039,
+              3303,
+              1405,
+              3304,
+              1403,
+              3358,
+              1040,
+              3356
+            ],
+            "confidence": 0.593,
+            "span": {
+              "offset": 883,
+              "length": 11
+            }
+          },
+          {
+            "content": "Urder",
+            "polygon": [
+              1306,
+              3422,
+              1432,
+              3431,
+              1428,
+              3481,
+              1302,
+              3472
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 895,
+              "length": 5
+            }
+          },
+          {
+            "content": "Closed",
+            "polygon": [
+              1459,
+              3433,
+              1613,
+              3443,
+              1608,
+              3495,
+              1455,
+              3483
+            ],
+            "confidence": 0.681,
+            "span": {
+              "offset": 901,
+              "length": 6
+            }
+          },
+          {
+            "content": "<",
+            "polygon": [
+              1643,
+              3445,
+              1669,
+              3446,
+              1665,
+              3500,
+              1638,
+              3498
+            ],
+            "confidence": 0.692,
+            "span": {
+              "offset": 908,
+              "length": 1
+            }
+          },
+          {
+            "content": "BIG",
+            "polygon": [
+              1342,
+              3589,
+              1419,
+              3596,
+              1415,
+              3645,
+              1339,
+              3638
+            ],
+            "confidence": 0.992,
+            "span": {
+              "offset": 910,
+              "length": 3
+            }
+          },
+          {
+            "content": "ZAX",
+            "polygon": [
+              1444,
+              3598,
+              1518,
+              3605,
+              1514,
+              3654,
+              1441,
+              3648
+            ],
+            "confidence": 0.961,
+            "span": {
+              "offset": 914,
+              "length": 3
+            }
+          },
+          {
+            "content": "SNAK",
+            "polygon": [
+              1544,
+              3607,
+              1643,
+              3616,
+              1639,
+              3665,
+              1540,
+              3657
+            ],
+            "confidence": 0.889,
+            "span": {
+              "offset": 918,
+              "length": 4
+            }
+          },
+          {
+            "content": "with",
+            "polygon": [
+              1668,
+              3618,
+              1771,
+              3627,
+              1766,
+              3675,
+              1664,
+              3667
+            ],
+            "confidence": 0.887,
+            "span": {
+              "offset": 923,
+              "length": 4
+            }
+          },
+          {
+            "content": "soy",
+            "polygon": [
+              1800,
+              3629,
+              1871,
+              3635,
+              1866,
+              3682,
+              1795,
+              3678
+            ],
+            "confidence": 0.533,
+            "span": {
+              "offset": 928,
+              "length": 3
+            }
+          },
+          {
+            "content": "g",
+            "polygon": [
+              1340,
+              3647,
+              1366,
+              3649,
+              1364,
+              3700,
+              1338,
+              3697
+            ],
+            "confidence": 0.692,
+            "span": {
+              "offset": 932,
+              "length": 1
+            }
+          },
+          {
+            "content": "Zas",
+            "polygon": [
+              1393,
+              3652,
+              1465,
+              3658,
+              1463,
+              3709,
+              1390,
+              3702
+            ],
+            "confidence": 0.583,
+            "span": {
+              "offset": 934,
+              "length": 3
+            }
+          },
+          {
+            "content": "Snak",
+            "polygon": [
+              1492,
+              3660,
+              1591,
+              3668,
+              1588,
+              3720,
+              1489,
+              3712
+            ],
+            "confidence": 0.574,
+            "span": {
+              "offset": 938,
+              "length": 4
+            }
+          },
+          {
+            "content": "by",
+            "polygon": [
+              1614,
+              3670,
+              1671,
+              3674,
+              1667,
+              3725,
+              1611,
+              3721
+            ],
+            "confidence": 0.966,
+            "span": {
+              "offset": 943,
+              "length": 2
+            }
+          },
+          {
+            "content": "tellus",
+            "polygon": [
+              1697,
+              3676,
+              1917,
+              3689,
+              1911,
+              3737,
+              1693,
+              3727
+            ],
+            "confidence": 0.519,
+            "span": {
+              "offset": 946,
+              "length": 6
+            }
+          },
+          {
+            "content": "Visit",
+            "polygon": [
+              915,
+              3789,
+              1051,
+              3789,
+              1051,
+              3846,
+              914,
+              3848
+            ],
+            "confidence": 0.583,
+            "span": {
+              "offset": 953,
+              "length": 5
+            }
+          },
+          {
+            "content": "mi",
+            "polygon": [
+              1067,
+              3789,
+              1132,
+              3788,
+              1132,
+              3846,
+              1066,
+              3846
+            ],
+            "confidence": 0.522,
+            "span": {
+              "offset": 959,
+              "length": 2
+            }
+          },
+          {
+            "content": "endback(",
+            "polygon": [
+              1302,
+              3769,
+              1489,
+              3772,
+              1487,
+              3826,
+              1302,
+              3819
+            ],
+            "confidence": 0.563,
+            "span": {
+              "offset": 962,
+              "length": 8
+            }
+          },
+          {
+            "content": "com",
+            "polygon": [
+              1499,
+              3772,
+              1574,
+              3777,
+              1571,
+              3830,
+              1497,
+              3826
+            ],
+            "confidence": 0.692,
+            "span": {
+              "offset": 971,
+              "length": 3
+            }
+          },
+          {
+            "content": "sind",
+            "polygon": [
+              1595,
+              3778,
+              1676,
+              3786,
+              1671,
+              3838,
+              1591,
+              3832
+            ],
+            "confidence": 0.518,
+            "span": {
+              "offset": 975,
+              "length": 4
+            }
+          },
+          {
+            "content": "ev",
+            "polygon": [
+              1700,
+              3789,
+              1750,
+              3795,
+              1744,
+              3844,
+              1694,
+              3840
+            ],
+            "confidence": 0.536,
+            "span": {
+              "offset": 980,
+              "length": 2
+            }
+          },
+          {
+            "content": "TH\u1ecaVNUMTKTE584U",
+            "polygon": [
+              1263,
+              3881,
+              1634,
+              3883,
+              1633,
+              3942,
+              1264,
+              3934
+            ],
+            "confidence": 0.535,
+            "span": {
+              "offset": 983,
+              "length": 15
+            }
+          }
+        ],
+        "lines": [
+          {
+            "content": "EnToen Emily E",
+            "polygon": [
+              1014,
+              2,
+              1464,
+              0,
+              1464,
+              40,
+              1014,
+              42
+            ],
+            "spans": [
+              {
+                "offset": 0,
+                "length": 14
+              }
+            ]
+          },
+          {
+            "content": "DT#243",
+            "polygon": [
+              1400,
+              142,
+              1722,
+              143,
+              1721,
+              234,
+              1399,
+              233
+            ],
+            "spans": [
+              {
+                "offset": 15,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "1 (20) Traditional Wings",
+            "polygon": [
+              1049,
+              364,
+              1681,
+              376,
+              1680,
+              438,
+              1049,
+              425
+            ],
+            "spans": [
+              {
+                "offset": 22,
+                "length": 24
+              }
+            ]
+          },
+          {
+            "content": "$27.49",
+            "polygon": [
+              1936,
+              383,
+              2101,
+              383,
+              2101,
+              441,
+              1938,
+              439
+            ],
+            "spans": [
+              {
+                "offset": 47,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "Ranch Sauce",
+            "polygon": [
+              1123,
+              433,
+              1419,
+              438,
+              1418,
+              499,
+              1122,
+              495
+            ],
+            "spans": [
+              {
+                "offset": 54,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1961,
+              453,
+              2100,
+              451,
+              2100,
+              509,
+              1962,
+              507
+            ],
+            "spans": [
+              {
+                "offset": 66,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "Ranch Sauce",
+            "polygon": [
+              1124,
+              503,
+              1418,
+              508,
+              1417,
+              568,
+              1122,
+              563
+            ],
+            "spans": [
+              {
+                "offset": 72,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1959,
+              518,
+              2098,
+              519,
+              2096,
+              579,
+              1959,
+              577
+            ],
+            "spans": [
+              {
+                "offset": 84,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "W -* Tongue Torch Sauce*",
+            "polygon": [
+              1118,
+              573,
+              1701,
+              583,
+              1700,
+              642,
+              1118,
+              632
+            ],
+            "spans": [
+              {
+                "offset": 90,
+                "length": 24
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1957,
+              590,
+              2091,
+              591,
+              2090,
+              647,
+              1959,
+              644
+            ],
+            "spans": [
+              {
+                "offset": 115,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Regular Fries",
+            "polygon": [
+              1054,
+              642,
+              1445,
+              648,
+              1444,
+              708,
+              1053,
+              701
+            ],
+            "spans": [
+              {
+                "offset": 121,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$2.59",
+            "polygon": [
+              1948,
+              660,
+              2083,
+              661,
+              2082,
+              712,
+              1949,
+              710
+            ],
+            "spans": [
+              {
+                "offset": 137,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Vanilla Shake",
+            "polygon": [
+              1062,
+              709,
+              1441,
+              715,
+              1440,
+              773,
+              1061,
+              768
+            ],
+            "spans": [
+              {
+                "offset": 143,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$4.99",
+            "polygon": [
+              1942,
+              725,
+              2072,
+              726,
+              2071,
+              779,
+              1944,
+              776
+            ],
+            "spans": [
+              {
+                "offset": 159,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "NO Cherry",
+            "polygon": [
+              1135,
+              779,
+              1360,
+              786,
+              1358,
+              835,
+              1134,
+              828
+            ],
+            "spans": [
+              {
+                "offset": 165,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1935,
+              787,
+              2064,
+              788,
+              2064,
+              840,
+              1936,
+              837
+            ],
+            "spans": [
+              {
+                "offset": 175,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 ZaxSeas Surf & Turf Meal",
+            "polygon": [
+              1072,
+              837,
+              1710,
+              849,
+              1709,
+              899,
+              1071,
+              887
+            ],
+            "spans": [
+              {
+                "offset": 181,
+                "length": 26
+              }
+            ]
+          },
+          {
+            "content": "$11.99",
+            "polygon": [
+              1905,
+              849,
+              2054,
+              850,
+              2053,
+              902,
+              1905,
+              902
+            ],
+            "spans": [
+              {
+                "offset": 208,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "1 ZaxSees Surf & Turf Meal",
+            "polygon": [
+              1200,
+              897,
+              1825,
+              910,
+              1824,
+              955,
+              1200,
+              941
+            ],
+            "spans": [
+              {
+                "offset": 215,
+                "length": 26
+              }
+            ]
+          },
+          {
+            "content": "Zaxtail Sauce",
+            "polygon": [
+              1199,
+              948,
+              1516,
+              957,
+              1515,
+              1000,
+              1198,
+              991
+            ],
+            "spans": [
+              {
+                "offset": 242,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1916,
+              971,
+              2043,
+              972,
+              2042,
+              1021,
+              1917,
+              1018
+            ],
+            "spans": [
+              {
+                "offset": 256,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "Zax Sauce",
+            "polygon": [
+              1197,
+              1000,
+              1413,
+              1004,
+              1412,
+              1047,
+              1196,
+              1042
+            ],
+            "spans": [
+              {
+                "offset": 262,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "1 Regular Fries",
+            "polygon": [
+              1196,
+              1054,
+              1557,
+              1059,
+              1557,
+              1106,
+              1196,
+              1101
+            ],
+            "spans": [
+              {
+                "offset": 272,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1915,
+              1028,
+              2039,
+              1029,
+              2040,
+              1073,
+              1915,
+              1070
+            ],
+            "spans": [
+              {
+                "offset": 288,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Small Water Cup",
+            "polygon": [
+              1194,
+              1109,
+              1604,
+              1114,
+              1603,
+              1163,
+              1194,
+              1156
+            ],
+            "spans": [
+              {
+                "offset": 294,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "1 Chocolate Shake",
+            "polygon": [
+              1066,
+              1156,
+              1480,
+              1168,
+              1479,
+              1217,
+              1066,
+              1205
+            ],
+            "spans": [
+              {
+                "offset": 312,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "2 #1 Big Zax Snack Meal (@7.29)",
+            "polygon": [
+              1059,
+              1211,
+              1813,
+              1230,
+              1811,
+              1282,
+              1059,
+              1263
+            ],
+            "spans": [
+              {
+                "offset": 330,
+                "length": 31
+              }
+            ]
+          },
+          {
+            "content": "$4.99",
+            "polygon": [
+              1915,
+              1186,
+              2045,
+              1186,
+              2045,
+              1232,
+              1916,
+              1230
+            ],
+            "spans": [
+              {
+                "offset": 362,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$14.58",
+            "polygon": [
+              1890,
+              1239,
+              2043,
+              1239,
+              2044,
+              1284,
+              1890,
+              1285
+            ],
+            "spans": [
+              {
+                "offset": 368,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "2 Big Zax Snack",
+            "polygon": [
+              1177,
+              1271,
+              1548,
+              1280,
+              1547,
+              1332,
+              1176,
+              1323
+            ],
+            "spans": [
+              {
+                "offset": 375,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "Zax Sauce",
+            "polygon": [
+              1177,
+              1330,
+              1400,
+              1338,
+              1398,
+              1386,
+              1177,
+              1379
+            ],
+            "spans": [
+              {
+                "offset": 391,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1917,
+              1345,
+              2048,
+              1347,
+              2048,
+              1405,
+              1916,
+              1403
+            ],
+            "spans": [
+              {
+                "offset": 401,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "2 Regular Fries",
+            "polygon": [
+              1171,
+              1388,
+              1547,
+              1398,
+              1545,
+              1448,
+              1171,
+              1438
+            ],
+            "spans": [
+              {
+                "offset": 407,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "2 Small Water Cup",
+            "polygon": [
+              1170,
+              1447,
+              1595,
+              1460,
+              1594,
+              1510,
+              1169,
+              1497
+            ],
+            "spans": [
+              {
+                "offset": 423,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "1 #1 Big Zax Snack Meal",
+            "polygon": [
+              1051,
+              1503,
+              1612,
+              1519,
+              1611,
+              1572,
+              1051,
+              1556
+            ],
+            "spans": [
+              {
+                "offset": 441,
+                "length": 23
+              }
+            ]
+          },
+          {
+            "content": "1 Big Zax Snack",
+            "polygon": [
+              1167,
+              1565,
+              1538,
+              1578,
+              1536,
+              1630,
+              1166,
+              1617
+            ],
+            "spans": [
+              {
+                "offset": 465,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$10.79",
+            "polygon": [
+              1886,
+              1528,
+              2045,
+              1529,
+              2045,
+              1588,
+              1885,
+              1588
+            ],
+            "spans": [
+              {
+                "offset": 481,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "Sauce",
+            "polygon": [
+              1247,
+              1629,
+              1390,
+              1632,
+              1390,
+              1689,
+              1245,
+              1686
+            ],
+            "spans": [
+              {
+                "offset": 488,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Regular Fries",
+            "polygon": [
+              1164,
+              1688,
+              1537,
+              1701,
+              1535,
+              1752,
+              1162,
+              1739
+            ],
+            "spans": [
+              {
+                "offset": 494,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1907,
+              1655,
+              2036,
+              1655,
+              2035,
+              1707,
+              1908,
+              1706
+            ],
+            "spans": [
+              {
+                "offset": 510,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Birthday Cake Shake",
+            "polygon": [
+              1163,
+              1748,
+              1683,
+              1768,
+              1681,
+              1820,
+              1163,
+              1799
+            ],
+            "spans": [
+              {
+                "offset": 516,
+                "length": 21
+              }
+            ]
+          },
+          {
+            "content": "1 3 Nibblerz Meal",
+            "polygon": [
+              1042,
+              1804,
+              1454,
+              1820,
+              1452,
+              1870,
+              1041,
+              1856
+            ],
+            "spans": [
+              {
+                "offset": 538,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "1 3 Nibblerz",
+            "polygon": [
+              1161,
+              1869,
+              1460,
+              1883,
+              1457,
+              1932,
+              1160,
+              1919
+            ],
+            "spans": [
+              {
+                "offset": 556,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "$9.19",
+            "polygon": [
+              1900,
+              1840,
+              2025,
+              1841,
+              2025,
+              1892,
+              1901,
+              1890
+            ],
+            "spans": [
+              {
+                "offset": 569,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Regular Fries",
+            "polygon": [
+              1163,
+              1930,
+              1527,
+              1945,
+              1524,
+              1995,
+              1161,
+              1978
+            ],
+            "spans": [
+              {
+                "offset": 575,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "1 Small Drink",
+            "polygon": [
+              1160,
+              1989,
+              1472,
+              2002,
+              1470,
+              2051,
+              1158,
+              2038
+            ],
+            "spans": [
+              {
+                "offset": 591,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "content": "Coke",
+            "polygon": [
+              1154,
+              2050,
+              1253,
+              2054,
+              1251,
+              2100,
+              1152,
+              2093
+            ],
+            "spans": [
+              {
+                "offset": 605,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "1 #1 Big Zax Snack Meal",
+            "polygon": [
+              1035,
+              2102,
+              1588,
+              2124,
+              1586,
+              2176,
+              1035,
+              2155
+            ],
+            "spans": [
+              {
+                "offset": 610,
+                "length": 23
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1891,
+              2083,
+              2014,
+              2082,
+              2015,
+              2130,
+              1891,
+              2129
+            ],
+            "spans": [
+              {
+                "offset": 634,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Big Zax Snack",
+            "polygon": [
+              1156,
+              2165,
+              1521,
+              2181,
+              1518,
+              2232,
+              1154,
+              2215
+            ],
+            "spans": [
+              {
+                "offset": 640,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$8.29",
+            "polygon": [
+              1888,
+              2138,
+              2008,
+              2138,
+              2008,
+              2197,
+              1886,
+              2196
+            ],
+            "spans": [
+              {
+                "offset": 656,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "Zax Sauce",
+            "polygon": [
+              1153,
+              2225,
+              1369,
+              2235,
+              1367,
+              2283,
+              1151,
+              2272
+            ],
+            "spans": [
+              {
+                "offset": 662,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "1 Regular Fries",
+            "polygon": [
+              1151,
+              2279,
+              1518,
+              2296,
+              1515,
+              2354,
+              1148,
+              2337
+            ],
+            "spans": [
+              {
+                "offset": 672,
+                "length": 15
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1880,
+              2260,
+              2004,
+              2261,
+              2005,
+              2309,
+              1880,
+              2308
+            ],
+            "spans": [
+              {
+                "offset": 688,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "1 Small Drink",
+            "polygon": [
+              1153,
+              2343,
+              1464,
+              2356,
+              1461,
+              2403,
+              1151,
+              2390
+            ],
+            "spans": [
+              {
+                "offset": 694,
+                "length": 13
+              }
+            ]
+          },
+          {
+            "content": "Coke",
+            "polygon": [
+              1145,
+              2405,
+              1246,
+              2409,
+              1244,
+              2451,
+              1144,
+              2446
+            ],
+            "spans": [
+              {
+                "offset": 708,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "1 SurveyItem",
+            "polygon": [
+              1024,
+              2459,
+              1316,
+              2466,
+              1315,
+              2514,
+              1023,
+              2507
+            ],
+            "spans": [
+              {
+                "offset": 713,
+                "length": 12
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1869,
+              2431,
+              1997,
+              2431,
+              1997,
+              2489,
+              1867,
+              2487
+            ],
+            "spans": [
+              {
+                "offset": 726,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "$0.00",
+            "polygon": [
+              1866,
+              2491,
+              1990,
+              2492,
+              1990,
+              2535,
+              1866,
+              2533
+            ],
+            "spans": [
+              {
+                "offset": 732,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "Sub Total",
+            "polygon": [
+              970,
+              2565,
+              1185,
+              2573,
+              1183,
+              2616,
+              969,
+              2607
+            ],
+            "spans": [
+              {
+                "offset": 738,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "$07.70",
+            "polygon": [
+              1839,
+              2595,
+              1989,
+              2600,
+              1987,
+              2645,
+              1839,
+              2641
+            ],
+            "spans": [
+              {
+                "offset": 748,
+                "length": 6
+              }
+            ]
+          },
+          {
+            "content": "Sales Tax",
+            "polygon": [
+              949,
+              2668,
+              1167,
+              2678,
+              1165,
+              2727,
+              947,
+              2717
+            ],
+            "spans": [
+              {
+                "offset": 755,
+                "length": 9
+              }
+            ]
+          },
+          {
+            "content": "$7.12",
+            "polygon": [
+              1870,
+              2708,
+              1999,
+              2711,
+              1999,
+              2761,
+              1869,
+              2759
+            ],
+            "spans": [
+              {
+                "offset": 765,
+                "length": 5
+              }
+            ]
+          },
+          {
+            "content": "Order Total",
+            "polygon": [
+              934,
+              2790,
+              1213,
+              2800,
+              1211,
+              2853,
+              932,
+              2843
+            ],
+            "spans": [
+              {
+                "offset": 771,
+                "length": 11
+              }
+            ]
+          },
+          {
+            "content": "$102.002",
+            "polygon": [
+              1826,
+              2826,
+              2035,
+              2826,
+              2034,
+              2883,
+              1826,
+              2882
+            ],
+            "spans": [
+              {
+                "offset": 783,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "Visa",
+            "polygon": [
+              925,
+              2925,
+              1027,
+              2930,
+              1027,
+              2978,
+              923,
+              2974
+            ],
+            "spans": [
+              {
+                "offset": 792,
+                "length": 4
+              }
+            ]
+          },
+          {
+            "content": "$102.02",
+            "polygon": [
+              1825,
+              2954,
+              2010,
+              2956,
+              2009,
+              3014,
+              1825,
+              3010
+            ],
+            "spans": [
+              {
+                "offset": 797,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "AUTHORIZED AMOUNT",
+            "polygon": [
+              918,
+              2990,
+              1360,
+              3004,
+              1359,
+              3057,
+              918,
+              3043
+            ],
+            "spans": [
+              {
+                "offset": 805,
+                "length": 17
+              }
+            ]
+          },
+          {
+            "content": "$102.02",
+            "polygon": [
+              1827,
+              3019,
+              2016,
+              3021,
+              2015,
+              3081,
+              1826,
+              3079
+            ],
+            "spans": [
+              {
+                "offset": 823,
+                "length": 7
+              }
+            ]
+          },
+          {
+            "content": "Card#: ************ 1081",
+            "polygon": [
+              1019,
+              3059,
+              1615,
+              3079,
+              1614,
+              3131,
+              1019,
+              3109
+            ],
+            "spans": [
+              {
+                "offset": 831,
+                "length": 24
+              }
+            ]
+          },
+          {
+            "content": "Authorization: 051221",
+            "polygon": [
+              1015,
+              3126,
+              1563,
+              3134,
+              1561,
+              3190,
+              1015,
+              3175
+            ],
+            "spans": [
+              {
+                "offset": 856,
+                "length": 21
+              }
+            ]
+          },
+          {
+            "content": "AID: A/000031010",
+            "polygon": [
+              909,
+              3301,
+              1410,
+              3299,
+              1410,
+              3357,
+              909,
+              3358
+            ],
+            "spans": [
+              {
+                "offset": 878,
+                "length": 16
+              }
+            ]
+          },
+          {
+            "content": "Urder Closed <",
+            "polygon": [
+              1305,
+              3422,
+              1671,
+              3446,
+              1667,
+              3499,
+              1302,
+              3473
+            ],
+            "spans": [
+              {
+                "offset": 895,
+                "length": 14
+              }
+            ]
+          },
+          {
+            "content": "BIG ZAX SNAK with soy",
+            "polygon": [
+              1336,
+              3588,
+              1871,
+              3634,
+              1867,
+              3682,
+              1333,
+              3638
+            ],
+            "spans": [
+              {
+                "offset": 910,
+                "length": 21
+              }
+            ]
+          },
+          {
+            "content": "g Zas Snak by tellus",
+            "polygon": [
+              1337,
+              3646,
+              1918,
+              3688,
+              1914,
+              3737,
+              1335,
+              3700
+            ],
+            "spans": [
+              {
+                "offset": 932,
+                "length": 20
+              }
+            ]
+          },
+          {
+            "content": "Visit mi",
+            "polygon": [
+              913,
+              3789,
+              1133,
+              3788,
+              1134,
+              3845,
+              913,
+              3847
+            ],
+            "spans": [
+              {
+                "offset": 953,
+                "length": 8
+              }
+            ]
+          },
+          {
+            "content": "endback( com sind ev",
+            "polygon": [
+              1302,
+              3768,
+              1770,
+              3788,
+              1767,
+              3845,
+              1302,
+              3817
+            ],
+            "spans": [
+              {
+                "offset": 962,
+                "length": 20
+              }
+            ]
+          },
+          {
+            "content": "TH\u1ecaVNUMTKTE584U",
+            "polygon": [
+              1263,
+              3880,
+              1644,
+              3883,
+              1644,
+              3941,
+              1263,
+              3935
+            ],
+            "spans": [
+              {
+                "offset": 983,
+                "length": 15
+              }
+            ]
+          }
+        ],
+        "spans": [
+          {
+            "offset": 0,
+            "length": 998
+          }
+        ]
+      }
+    ],
+    "styles": [],
+    "documents": [
+      {
+        "docType": "receipt.retailMeal",
+        "boundingRegions": [
+          {
+            "pageNumber": 1,
+            "polygon": [
+              0,
+              0,
+              3024,
+              0,
+              3024,
+              4032,
+              0,
+              4032
+            ]
+          }
+        ],
+        "fields": {
+          "Items": {
+            "type": "array",
+            "valueArray": [
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "(20) Traditional Wings",
+                    "content": "(20) Traditional Wings",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1101,
+                          364,
+                          1682,
+                          377,
+                          1681,
+                          440,
+                          1100,
+                          427
+                        ]
+                      }
+                    ],
+                    "confidence": 0.973,
+                    "spans": [
+                      {
+                        "offset": 24,
+                        "length": 22
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1049,
+                          365,
+                          1081,
+                          365,
+                          1082,
+                          427,
+                          1050,
+                          426
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 22,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 27.49,
+                    "content": "$27.49",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1936,
+                          383,
+                          2098,
+                          383,
+                          2098,
+                          441,
+                          1936,
+                          440
+                        ]
+                      }
+                    ],
+                    "confidence": 0.98,
+                    "spans": [
+                      {
+                        "offset": 47,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "1 (20) Traditional Wings\n$27.49\nRanch Sauce\n$0.00\nRanch Sauce\n$0.00\nW -* Tongue Torch Sauce*\n$0.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1049,
+                      364,
+                      2099,
+                      381,
+                      2095,
+                      649,
+                      1045,
+                      633
+                    ]
+                  }
+                ],
+                "confidence": 0.948,
+                "spans": [
+                  {
+                    "offset": 22,
+                    "length": 98
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Regular Fries",
+                    "content": "Regular Fries",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1101,
+                          641,
+                          1443,
+                          649,
+                          1442,
+                          711,
+                          1100,
+                          703
+                        ]
+                      }
+                    ],
+                    "confidence": 0.972,
+                    "spans": [
+                      {
+                        "offset": 123,
+                        "length": 13
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1058,
+                          642,
+                          1090,
+                          643,
+                          1088,
+                          703,
+                          1057,
+                          703
+                        ]
+                      }
+                    ],
+                    "confidence": 0.977,
+                    "spans": [
+                      {
+                        "offset": 121,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 2.59,
+                    "content": "$2.59",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1948,
+                          660,
+                          2076,
+                          661,
+                          2076,
+                          712,
+                          1948,
+                          710
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 137,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 Regular Fries\n$2.59",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1058,
+                      642,
+                      2077,
+                      658,
+                      2076,
+                      719,
+                      1057,
+                      703
+                    ]
+                  }
+                ],
+                "confidence": 0.97,
+                "spans": [
+                  {
+                    "offset": 121,
+                    "length": 21
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Vanilla Shake",
+                    "content": "Vanilla Shake",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1105,
+                          711,
+                          1440,
+                          717,
+                          1439,
+                          775,
+                          1104,
+                          769
+                        ]
+                      }
+                    ],
+                    "confidence": 0.973,
+                    "spans": [
+                      {
+                        "offset": 145,
+                        "length": 13
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1062,
+                          710,
+                          1091,
+                          711,
+                          1090,
+                          769,
+                          1061,
+                          769
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 143,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 4.99,
+                    "content": "$4.99",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1942,
+                          725,
+                          2068,
+                          726,
+                          2067,
+                          779,
+                          1942,
+                          777
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 159,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 Vanilla Shake\n$4.99\nNO Cherry\n$0.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1062,
+                      709,
+                      2068,
+                      726,
+                      2066,
+                      848,
+                      1060,
+                      831
+                    ]
+                  }
+                ],
+                "confidence": 0.963,
+                "spans": [
+                  {
+                    "offset": 143,
+                    "length": 37
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "ZaxSeas Surf & Turf Meal",
+                    "content": "ZaxSeas Surf & Turf Meal",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1120,
+                          839,
+                          1711,
+                          848,
+                          1710,
+                          900,
+                          1119,
+                          891
+                        ]
+                      }
+                    ],
+                    "confidence": 0.968,
+                    "spans": [
+                      {
+                        "offset": 183,
+                        "length": 24
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1075,
+                          838,
+                          1101,
+                          838,
+                          1100,
+                          889,
+                          1074,
+                          888
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 181,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 11.99,
+                    "content": "$11.99",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1905,
+                          849,
+                          2053,
+                          849,
+                          2053,
+                          902,
+                          1905,
+                          901
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 208,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "1 ZaxSeas Surf & Turf Meal\n$11.99\n1 ZaxSees Surf & Turf Meal\nZaxtail Sauce\n$0.00\nZax Sauce\n1 Regular Fries\n$0.00\n1 Small Water Cup",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1075,
+                      830,
+                      2054,
+                      849,
+                      2048,
+                      1173,
+                      1069,
+                      1154
+                    ]
+                  }
+                ],
+                "confidence": 0.879,
+                "spans": [
+                  {
+                    "offset": 181,
+                    "length": 130
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "Chocolate Shake",
+                    "content": "Chocolate Shake",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1109,
+                          1158,
+                          1478,
+                          1169,
+                          1477,
+                          1218,
+                          1108,
+                          1207
+                        ]
+                      }
+                    ],
+                    "confidence": 0.973,
+                    "spans": [
+                      {
+                        "offset": 314,
+                        "length": 15
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1069,
+                          1157,
+                          1094,
+                          1158,
+                          1094,
+                          1207,
+                          1069,
+                          1207
+                        ]
+                      }
+                    ],
+                    "confidence": 0.977,
+                    "spans": [
+                      {
+                        "offset": 312,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 4.99,
+                    "content": "$4.99",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1915,
+                          1186,
+                          2040,
+                          1186,
+                          2040,
+                          1232,
+                          1915,
+                          1231
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 362,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 Chocolate Shake\n$4.99",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1069,
+                      1157,
+                      2041,
+                      1183,
+                      2040,
+                      1234,
+                      1068,
+                      1208
+                    ]
+                  }
+                ],
+                "confidence": 0.971,
+                "spans": [
+                  {
+                    "offset": 312,
+                    "length": 17
+                  },
+                  {
+                    "offset": 362,
+                    "length": 5
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "#1 Big Zax Snack Meal",
+                    "content": "#1 Big Zax Snack Meal",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1105,
+                          1211,
+                          1632,
+                          1228,
+                          1630,
+                          1282,
+                          1103,
+                          1265
+                        ]
+                      }
+                    ],
+                    "confidence": 0.966,
+                    "spans": [
+                      {
+                        "offset": 332,
+                        "length": 21
+                      }
+                    ]
+                  },
+                  "Price": {
+                    "type": "number",
+                    "valueNumber": 7.29,
+                    "content": "(@7.29)",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1653,
+                          1228,
+                          1813,
+                          1232,
+                          1812,
+                          1282,
+                          1653,
+                          1278
+                        ]
+                      }
+                    ],
+                    "confidence": 0.977,
+                    "spans": [
+                      {
+                        "offset": 354,
+                        "length": 7
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 2,
+                    "content": "2",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1062,
+                          1212,
+                          1088,
+                          1212,
+                          1088,
+                          1265,
+                          1062,
+                          1264
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 330,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 14.58,
+                    "content": "$14.58",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1890,
+                          1241,
+                          2041,
+                          1239,
+                          2041,
+                          1285,
+                          1891,
+                          1285
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 368,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "2 #1 Big Zax Snack Meal (@7.29)\n$14.58\n2 Big Zax Snack\nZax Sauce\n$0.00\n2 Regular Fries\n2 Small Water Cup",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1062,
+                      1211,
+                      2051,
+                      1239,
+                      2043,
+                      1523,
+                      1054,
+                      1496
+                    ]
+                  }
+                ],
+                "confidence": 0.897,
+                "spans": [
+                  {
+                    "offset": 330,
+                    "length": 31
+                  },
+                  {
+                    "offset": 368,
+                    "length": 72
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "#1 Big Zax Snack Meal",
+                    "content": "#1 Big Zax Snack Meal",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1091,
+                          1504,
+                          1610,
+                          1518,
+                          1609,
+                          1572,
+                          1090,
+                          1558
+                        ]
+                      }
+                    ],
+                    "confidence": 0.966,
+                    "spans": [
+                      {
+                        "offset": 443,
+                        "length": 21
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1051,
+                          1504,
+                          1077,
+                          1505,
+                          1078,
+                          1558,
+                          1052,
+                          1557
+                        ]
+                      }
+                    ],
+                    "confidence": 0.973,
+                    "spans": [
+                      {
+                        "offset": 441,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 10.79,
+                    "content": "$10.79",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1885,
+                          1528,
+                          2044,
+                          1528,
+                          2044,
+                          1588,
+                          1885,
+                          1587
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 481,
+                        "length": 6
+                      }
+                    ]
+                  }
+                },
+                "content": "1 #1 Big Zax Snack Meal\n1 Big Zax Snack\n$10.79\nSauce\n1 Regular Fries\n$0.00\n1 Birthday Cake Shake",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1051,
+                      1493,
+                      2046,
+                      1528,
+                      2035,
+                      1833,
+                      1041,
+                      1797
+                    ]
+                  }
+                ],
+                "confidence": 0.929,
+                "spans": [
+                  {
+                    "offset": 441,
+                    "length": 96
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "3 Nibblerz Meal",
+                    "content": "3 Nibblerz Meal",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1088,
+                          1806,
+                          1455,
+                          1820,
+                          1453,
+                          1873,
+                          1086,
+                          1859
+                        ]
+                      }
+                    ],
+                    "confidence": 0.973,
+                    "spans": [
+                      {
+                        "offset": 540,
+                        "length": 15
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1042,
+                          1805,
+                          1068,
+                          1806,
+                          1067,
+                          1858,
+                          1041,
+                          1857
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 538,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 9.19,
+                    "content": "$9.19",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1900,
+                          1840,
+                          2022,
+                          1841,
+                          2022,
+                          1892,
+                          1900,
+                          1890
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 569,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 3 Nibblerz Meal\n1 3 Nibblerz\n$9.19\n1 Regular Fries\n1 Small Drink\nCoke\n$0.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1042,
+                      1802,
+                      2024,
+                      1841,
+                      2012,
+                      2135,
+                      1030,
+                      2096
+                    ]
+                  }
+                ],
+                "confidence": 0.956,
+                "spans": [
+                  {
+                    "offset": 538,
+                    "length": 71
+                  },
+                  {
+                    "offset": 634,
+                    "length": 5
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "#1 Big Zax Snack Meal",
+                    "content": "#1 Big Zax Snack Meal",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1078,
+                          2104,
+                          1588,
+                          2120,
+                          1586,
+                          2176,
+                          1076,
+                          2160
+                        ]
+                      }
+                    ],
+                    "confidence": 0.967,
+                    "spans": [
+                      {
+                        "offset": 612,
+                        "length": 21
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1035,
+                          2103,
+                          1061,
+                          2104,
+                          1062,
+                          2157,
+                          1036,
+                          2156
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 610,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 8.29,
+                    "content": "$8.29",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1886,
+                          2138,
+                          2008,
+                          2138,
+                          2008,
+                          2197,
+                          1886,
+                          2196
+                        ]
+                      }
+                    ],
+                    "confidence": 0.979,
+                    "spans": [
+                      {
+                        "offset": 656,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 #1 Big Zax Snack Meal\n1 Big Zax Snack\n$8.29\nZax Sauce\n1 Regular Fries\n$0.00\n1 Small Drink\nCoke\n$0.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1035,
+                      2093,
+                      2012,
+                      2138,
+                      1995,
+                      2494,
+                      1019,
+                      2449
+                    ]
+                  }
+                ],
+                "confidence": 0.9,
+                "spans": [
+                  {
+                    "offset": 610,
+                    "length": 23
+                  },
+                  {
+                    "offset": 640,
+                    "length": 72
+                  },
+                  {
+                    "offset": 726,
+                    "length": 5
+                  }
+                ]
+              },
+              {
+                "type": "object",
+                "valueObject": {
+                  "Description": {
+                    "type": "string",
+                    "valueString": "SurveyItem",
+                    "content": "SurveyItem",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1073,
+                          2460,
+                          1313,
+                          2467,
+                          1311,
+                          2514,
+                          1072,
+                          2508
+                        ]
+                      }
+                    ],
+                    "confidence": 0.943,
+                    "spans": [
+                      {
+                        "offset": 715,
+                        "length": 10
+                      }
+                    ]
+                  },
+                  "Quantity": {
+                    "type": "number",
+                    "valueNumber": 1,
+                    "content": "1",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1030,
+                          2459,
+                          1054,
+                          2460,
+                          1053,
+                          2508,
+                          1029,
+                          2508
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 713,
+                        "length": 1
+                      }
+                    ]
+                  },
+                  "TotalPrice": {
+                    "type": "number",
+                    "valueNumber": 0,
+                    "content": "$0.00",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1866,
+                          2492,
+                          1987,
+                          2492,
+                          1987,
+                          2536,
+                          1866,
+                          2534
+                        ]
+                      }
+                    ],
+                    "confidence": 0.978,
+                    "spans": [
+                      {
+                        "offset": 732,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "1 SurveyItem\n$0.00",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      1030,
+                      2459,
+                      1988,
+                      2479,
+                      1987,
+                      2537,
+                      1029,
+                      2517
+                    ]
+                  }
+                ],
+                "confidence": 0.941,
+                "spans": [
+                  {
+                    "offset": 713,
+                    "length": 12
+                  },
+                  {
+                    "offset": 732,
+                    "length": 5
+                  }
+                ]
+              }
+            ]
+          },
+          "Subtotal": {
+            "type": "number",
+            "valueNumber": 7.7,
+            "content": "$07.70",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1839,
+                  2595,
+                  1988,
+                  2601,
+                  1987,
+                  2645,
+                  1839,
+                  2641
+                ]
+              }
+            ],
+            "confidence": 0.94,
+            "spans": [
+              {
+                "offset": 748,
+                "length": 6
+              }
+            ]
+          },
+          "TaxDetails": {
+            "type": "array",
+            "valueArray": [
+              {
+                "type": "object",
+                "valueObject": {
+                  "Amount": {
+                    "type": "currency",
+                    "valueCurrency": {
+                      "currencySymbol": "$",
+                      "amount": 7.12,
+                      "currencyCode": "USD"
+                    },
+                    "content": "$7.12",
+                    "boundingRegions": [
+                      {
+                        "pageNumber": 1,
+                        "polygon": [
+                          1872,
+                          2708,
+                          1998,
+                          2710,
+                          1997,
+                          2761,
+                          1871,
+                          2758
+                        ]
+                      }
+                    ],
+                    "confidence": 0.977,
+                    "spans": [
+                      {
+                        "offset": 765,
+                        "length": 5
+                      }
+                    ]
+                  }
+                },
+                "content": "Sales Tax\n$7.12",
+                "boundingRegions": [
+                  {
+                    "pageNumber": 1,
+                    "polygon": [
+                      952,
+                      2669,
+                      1999,
+                      2703,
+                      1997,
+                      2762,
+                      950,
+                      2728
+                    ]
+                  }
+                ],
+                "confidence": 0.939,
+                "spans": [
+                  {
+                    "offset": 755,
+                    "length": 15
+                  }
+                ]
+              }
+            ]
+          },
+          "Total": {
+            "type": "number",
+            "valueNumber": 102.002,
+            "content": "$102.002",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1826,
+                  2828,
+                  2032,
+                  2826,
+                  2033,
+                  2884,
+                  1826,
+                  2881
+                ]
+              }
+            ],
+            "confidence": 0.958,
+            "spans": [
+              {
+                "offset": 783,
+                "length": 8
+              }
+            ]
+          },
+          "TotalTax": {
+            "type": "number",
+            "valueNumber": 7.12,
+            "content": "$7.12",
+            "boundingRegions": [
+              {
+                "pageNumber": 1,
+                "polygon": [
+                  1872,
+                  2708,
+                  1998,
+                  2710,
+                  1997,
+                  2761,
+                  1871,
+                  2758
+                ]
+              }
+            ],
+            "confidence": 0.977,
+            "spans": [
+              {
+                "offset": 765,
+                "length": 5
+              }
+            ]
+          }
+        },
+        "confidence": 0.968,
+        "spans": [
+          {
+            "offset": 0,
+            "length": 998
+          }
+        ]
+      }
+    ]
+  }
+}

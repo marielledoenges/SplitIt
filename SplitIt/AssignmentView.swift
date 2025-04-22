@@ -76,14 +76,10 @@ struct AssignmentView: View {
                     }
                 }
                 .padding(.horizontal)
-
-                ScrollView {
-                    
-                    
-                    ForEach(people.indices, id: \.self) { index in
-                        let person = people[index]
-
-                        PersonCardView(
+                
+                List {
+                    ForEach(people) { person in
+                        PersonRow(
                             person: person,
                             sharedItemCounts: sharedItemCounts,
                             tax: tax,
@@ -95,6 +91,13 @@ struct AssignmentView: View {
                             onAssignTapped: {
                                 selectedPersonID = person.id
                             },
+                            onDelete: {
+                                withAnimation {
+                                    if let index = people.firstIndex(where: { $0.id == person.id }) {
+                                        people.remove(at: index)
+                                    }
+                                }
+                            },
                             onNameChanged: { newName in
                                 if let index = people.firstIndex(where: { $0.id == person.id }) {
                                     people[index].name = newName
@@ -103,11 +106,8 @@ struct AssignmentView: View {
                         )
                     }
                 }
-                
-//                Text("Share Your Split")
-//                    .font(.headline)
-//                    .foregroundColor(.primary)   // Adapts to black in light mode, white in dark mode
-//                    .padding(.top)
+                .listStyle(.plain)
+
                 Button(action: shareBillSplit) {
                     Label("Share Your Split", systemImage: "square.and.arrow.up")
                         .padding()
@@ -206,6 +206,7 @@ struct PersonCardView: View {
     let getTotal: (Person) -> Double
     var onAssignTapped: () -> Void
     var onNameChanged: (String) -> Void
+    
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -244,9 +245,12 @@ struct PersonCardView: View {
 
                 Spacer()
 
-                Button("Assign Items") {
-                    onAssignTapped()
-                }
+                Button(action: onAssignTapped) {
+                        Text("Assign Items")
+                            .font(.subheadline)
+                            .foregroundColor(.blue)
+                    }
+                    .buttonStyle(PlainButtonStyle())
             }
 
             ForEach(person.items, id: \.id) { item in
@@ -290,13 +294,51 @@ struct PersonCardView: View {
             }
             .foregroundColor(.black)
         }
-        .padding()
-        .background(Color.white)
-        .cornerRadius(12)
-        .shadow(radius: 4)
-        .padding(.horizontal)
     }
 }
+
+struct PersonRow: View {
+    let person: Person
+    let sharedItemCounts: [UUID: Int]
+    let tax: Double
+    let tip: Double
+    let getSubtotal: (Person) -> Double
+    let getTax: (Person) -> Double
+    let getTip: (Person) -> Double
+    let getTotal: (Person) -> Double
+    let onAssignTapped: () -> Void
+    let onDelete: () -> Void
+    let onNameChanged: (String) -> Void
+
+    var body: some View {
+        ZStack {
+            PersonCardView(
+                person: person,
+                sharedItemCounts: sharedItemCounts,
+                tax: tax,
+                tip: tip,
+                getSubtotal: getSubtotal,
+                getTax: getTax,
+                getTip: getTip,
+                getTotal: getTotal,
+                onAssignTapped: onAssignTapped,
+                onNameChanged: onNameChanged
+            )
+            .padding()
+            .background(Color.white)
+            .cornerRadius(12)
+            .shadow(radius: 4)
+        }
+        .listRowSeparator(.hidden)
+        .swipeActions {
+            Button(role: .destructive, action: onDelete) {
+                Label("Delete", systemImage: "trash")
+                    .labelStyle(IconOnlyLabelStyle())
+            }
+        }
+    }
+}
+
 
 
 struct Person: Identifiable {
