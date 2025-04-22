@@ -195,6 +195,7 @@ struct AssignItemsView: View {
 
 struct PersonCardView: View {
     @State private var isEditingName = false
+    @FocusState private var isNameFieldFocused: Bool
     @State private var editedName: String = ""
     let person: Person
     let sharedItemCounts: [UUID: Int]
@@ -207,26 +208,37 @@ struct PersonCardView: View {
     var onAssignTapped: () -> Void
     var onNameChanged: (String) -> Void
     
+    func saveEditedName() {
+        guard isEditingName else { return }
+        isEditingName = false
+        if editedName.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return
+        }
+        if editedName != person.name {
+            onNameChanged(editedName)
+        }
+    }
+    
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack {
                 if isEditingName {
-                    TextField("Name", text: $editedName, onCommit: {
-                        onNameChanged(editedName)
-                        isEditingName = false
-                    })
-                    .textFieldStyle(PlainTextFieldStyle())
-                    .font(.title2.bold())                
-                    .foregroundColor(.black)   
-                    .frame(maxWidth: 150)
+                    TextField("Name", text: $editedName)
+                        .textFieldStyle(PlainTextFieldStyle())
+                        .font(.title2.bold())
+                        .foregroundColor(.black)
+                        .frame(maxWidth: 150)
+                        .focused($isNameFieldFocused)
+                        .onSubmit {
+                            saveEditedName()
+                        }
+                        .onChange(of: isNameFieldFocused) {
+                            if !isNameFieldFocused {
+                                saveEditedName()
+                            }
+                        }
 
-                    Button(action: {
-                        isEditingName = false
-                    }) {
-                        Image(systemName: "checkmark.circle")
-                            .foregroundColor(.green)
-                    }
                 } else {
                     Text(person.name)
                         .font(.title2)
@@ -237,6 +249,7 @@ struct PersonCardView: View {
                     Button(action: {
                         editedName = person.name
                         isEditingName = true
+                        isNameFieldFocused = true // immediately focus the text field
                     }) {
                         Image(systemName: "pencil")
                             .foregroundColor(.blue)
@@ -246,12 +259,13 @@ struct PersonCardView: View {
                 Spacer()
 
                 Button(action: onAssignTapped) {
-                        Text("Assign Items")
-                            .font(.subheadline)
-                            .foregroundColor(.blue)
-                    }
-                    .buttonStyle(PlainButtonStyle())
+                    Text("Assign Items")
+                        .font(.subheadline)
+                        .foregroundColor(.blue)
+                }
+                .buttonStyle(PlainButtonStyle())
             }
+
 
             ForEach(person.items, id: \.id) { item in
                 let count = sharedItemCounts[item.id] ?? 1
